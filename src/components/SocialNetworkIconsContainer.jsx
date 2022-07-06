@@ -1,18 +1,28 @@
 import React from 'react';
-import { SocialIcon } from 'react-social-icons';
-import { MailIcon } from '@heroicons/react/solid'
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 
 const SocialNetworkIconsContainer = () => {
-
     return (
-        <ul className='w-full h-auto flex gap-x-5 justify-center items-center'>
-            <li><SocialIcon url='https://www.linkedin.com/in/julienhenry9671/' target="_blank" style={{ height: 40, width: 40 }} bgColor='#DCD7C9' network='linkedin' label="Let's connect on linked" /></li>
-            <li><SocialIcon url='https://github.com/pyko7' target="_blank" style={{ height: 40, width: 40 }} bgColor='#DCD7C9' network='github' label="My github" /></li>
-            <li><SocialIcon  url='mailto:julien.f.henry@gmail.com' style={{ height: 40, width: 40 }} bgColor='#DCD7C9' network='email' label="Email me" /></li>
-
+        <ul className='w-full h-auto flex gap-x-9 justify-center items-center text-secondary'>
+            <li>
+                <a href="https://www.linkedin.com/in/julienhenry9671" target="_blank" rel='noreferrer' className='focus:outline-none'>
+                    <FontAwesomeIcon icon={faLinkedin} aria-label="My LinkedIn" className='w-7 h-7' />
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/pyko7" target="_blank" rel='noreferrer' className='focus:outline-none'>
+                    <FontAwesomeIcon icon={faGithub} aria-label="My Github" className='w-7 h-7' />
+                </a>
+            </li>
+            <li>
+                <a href="mailto:julien.f.henry@gmail.com" target="_blank" rel='noreferrer' className='focus:outline-none'>
+                    <FontAwesomeIcon icon={faEnvelope} aria-label="Email me" className='w-7 h-7' />
+                </a>
+            </li>
         </ul>
     );
 };

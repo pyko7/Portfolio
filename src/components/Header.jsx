@@ -9,7 +9,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <header className='sticky w-full h-20 px-14 flex justify-between items-center sm:px-10'>
+        <header className='sticky w-full max-w-[1920px] h-20 my-0 mx-auto px-14 flex justify-between items-center sm:px-10'>
             <Logo />
             <div className='sm:hidden'>
                 <Navbar />
