@@ -50,10 +50,12 @@ const MobileNavbarModal = ({ isOpen, setIsOpen }) => {
                                 </div>
                                 <nav className='w-full px-3'>
                                     <ul className='w-full flex flex-col gap-y-4 items-start text-secondary text-lg'>
-                                        <li>About</li>
-                                        <li className='navItem'>Work</li>
-                                        <li className='navItem'>Contact</li>
-                                        <li className='w-fit px-4 py-2 mt-6 rounded-3xl bg-secondary text-primary font-medium hover:bg-secondaryLighten'>Resume</li>
+                                        <li><a href="#about" className='md:outline-none'>About</a></li>
+                                        <li><a href='#work' className='md:outline-none'>Work</a></li>
+                                        <li><a href='#contact' className='md:outline-none'>Contact</a></li>
+                                        <li className='w-fit px-4 py-2 mt-6 rounded-3xl bg-secondary text-primary font-medium hover:bg-secondaryLighten'>
+                                            <a href='#'>Resume</a>
+                                        </li>
                                     </ul>
                                 </nav>
                             </Transition.Child>

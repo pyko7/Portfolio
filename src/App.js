@@ -1,13 +1,14 @@
-import Homepage from "./pages/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Work from "./pages/Work";
 function App() {
   return (
-    <main className="w-screen min-h-screen bg-primary">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-        </Routes>
-      </BrowserRouter>
+    <main className="w-full flex flex-col overflow-x-hidden bg-primary md:gap-y-14">
+      <Header />
+      <Home />
+      <About />
+      <Work />
     </main>
   );
 }
