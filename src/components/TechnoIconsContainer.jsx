@@ -12,7 +12,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const TechnoIconsContainer = () => {
     return (
-        <ul className='w-full h-auto flex flex-wrap gap-x-12 gap-y-3 justify-center items-center text-secondary'>
+        <ul className='w-full h-auto flex flex-wrap gap-x-12 gap-y-3 justify-center items-center text-secondary '>
             <li className='flex flex-col justify-center items-center gap-y-1 text-base'>
                 <FontAwesomeIcon icon={faHtml5} className="w-auto h-8 hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)] sm:h-5" />
                 HTML5

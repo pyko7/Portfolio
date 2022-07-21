@@ -10,15 +10,8 @@ module.exports = {
         tertiary: "#3F4E4F",
         quaternary: "#A27B5C",
       },
-      keyframes: {
-        slidein: {
-          "0%": { transform: "translateY(55%)", opacity: 0 },
-          "75%": { opacity: 0.3 },
-          "100%": { transform: "translateY(0)", opacity: 1 },
-        },
-      },
-      animation: {
-        slidein: "slidein 1s ease-in",
+      transitionProperty: {
+        width: "width",
       },
     },
     screens: {

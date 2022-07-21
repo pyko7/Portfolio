@@ -8,72 +8,65 @@ import SocialNetworkIconsContainer from './SocialNetworkIconsContainer';
 const MobileNavbarModal = ({ isOpen, setIsOpen }) => {
 
     return (
-        <Transition appear={true} show={isOpen}>
-            <Dialog open={isOpen} unmount={false} onClose={() => setIsOpen(false)}>
+        <Transition show={isOpen} >
+            <Dialog onClose={() => setIsOpen(false)}>
                 {/* background opacity transition */}
                 <Transition.Child
-                    enter="transition-opacity ease-linear duration-500"
+                    enter="ease-linear duration-300"
                     enterFrom="opacity-0"
                     enterTo="opacity-100"
-                    leave="transition-opacity ease-linear duration-500"
+                    leave="ease-linear duration-500"
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
+                    className="hidden sm:block fixed inset-0 overflow-hidden bg-black/[.25] backdrop-blur-sm z-50"
+                />
+                <Transition.Child
+                    enter="ease-in-out duration-500 "
+                    enterFrom="translate-x-full"
+                    enterTo="translate-x-0"
+                    leave="ease-in duration-700 delay-100"
+                    leaveFrom="translate-x-0"
+                    leaveTo="translate-x-full"
+                    className='hidden sm:block sm:fixed sm:p-5 sm:right-0 sm:w-60 sm:top-0 sm:min-h-screen sm:bg-tertiary sm:z-50'
                 >
-                    <div className="hidden sm:block fixed inset-0 overflow-hidden bg-black/[.25] backdrop-blur-sm" />
-                </Transition.Child>
+                    <Transition.Child
+                        enter="ease-in-out duration-500 "
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-1000"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <Dialog.Panel className='w-full h-full' >
+                            {/* nav list translate animation */}
+                            <div className='w-full mb-16 flex justify-end'>
+                                <XIcon className='w-10 h-10 text-secondary' aria-label="Close navigation modal" onClick={() => setIsOpen(false)} />
+                            </div>
 
-
-                <Dialog.Panel>
-                    <div className='hidden sm:block fixed p-5 right-0 w-60 top-0 min-h-screen bg-tertiary'>
-                        {/* modal translation animation */}
-                        <Transition.Child
-                            enter="transition ease-in-out duration-500 transform"
-                            enterFrom="translate-x-full"
-                            enterTo="translate-x-0"
-                            leave="transition ease-in-out duration-1000 transform"
-                            leaveFrom="translate-x-28"
-                            leaveTo="translate-x-full"
-                        >
-                            {/* list opacity animation */}
+                            <nav className='w-full px-3'>
+                                <ul className='w-full flex flex-col gap-y-4 items-start text-secondary text-lg'>
+                                    <li><a href="#about" className='md:outline-none'>About</a></li>
+                                    <li><a href='#work' className='md:outline-none'>Work</a></li>
+                                    <li><a href='#contact' className='md:outline-none'>Contact</a></li>
+                                    <li className='w-fit px-4 py-2 mt-6 rounded-3xl bg-secondary text-primary font-medium'>
+                                        <a href='#'>Resume</a>
+                                    </li>
+                                </ul>
+                            </nav>
                             <Transition.Child
-                                enter="transition-opacity ease-linear duration-500"
-                                enterFrom="opacity-0"
-                                enterTo="opacity-100"
-                                leave="transition-opacity ease-linear duration-500"
-                                leaveFrom="opacity-100"
-                                leaveTo="opacity-0"
-                            >
-                                <div className='w-full mb-16 flex justify-end'>
-                                    <div className='w-10 h-10 text-secondary'>
-                                        <XIcon aria-label="Close navigation modal" onClick={() => setIsOpen(false)} />
-                                    </div>
-                                </div>
-                                <nav className='w-full px-3'>
-                                    <ul className='w-full flex flex-col gap-y-4 items-start text-secondary text-lg'>
-                                        <li><a href="#about" className='md:outline-none'>About</a></li>
-                                        <li><a href='#work' className='md:outline-none'>Work</a></li>
-                                        <li><a href='#contact' className='md:outline-none'>Contact</a></li>
-                                        <li className='w-fit px-4 py-2 mt-6 rounded-3xl bg-secondary text-primary font-medium hover:bg-secondaryLighten'>
-                                            <a href='#'>Resume</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </Transition.Child>
-                        </Transition.Child>
-                        <div className='fixed bottom-3 w-52'>
-                            <Transition.Child
-                                enter="transition ease-in-out duration-500 transform"
+                                enter="ease-in-out duration-500 "
                                 enterFrom="translate-x-full"
                                 enterTo="translate-x-0"
-                                leave="transition ease-in-out duration-1000 transform"
+                                leave="ease-in duration-700 delay-500"
                                 leaveFrom="translate-x-0"
-                                leaveTo="-translate-x-full"
+                                leaveTo="translate-x-full"
+                                className='fixed bottom-3 w-52'
                             >
                                 <SocialNetworkIconsContainer />
                             </Transition.Child>
-                        </div>
-                    </div>
-                </Dialog.Panel>
+                        </Dialog.Panel>
+                    </Transition.Child>
+                </Transition.Child>
             </Dialog>
         </Transition >
     );
