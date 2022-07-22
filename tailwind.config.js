@@ -10,8 +10,32 @@ module.exports = {
         tertiary: "#3F4E4F",
         quaternary: "#A27B5C",
       },
-      transitionProperty: {
-        width: "width",
+      keyframes: {
+        slidein: {
+          "0%": { transform: "translateY(55%)", opacity: 0 },
+          "75%": { opacity: 0.3 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+        clockMinuteHand: {
+          "100%": { transform: "rotate(360deg)" },
+        },
+        clockMinuteHand: {
+          "100%": { transform: "rotate(360deg)" },
+        },
+        clockHourHand: {
+          "100%": { transform: "rotate(60deg)" },
+        },
+        hideLoader: {
+          "0%": { opacity: "1" },
+          "50%": { opacity: ".4" },
+          "90%": { opacity: "0" },
+        },
+      },
+      animation: {
+        slidein: "slidein 1s ease-in",
+        clockMinuteHand: "clockMinuteHand 1.5s linear infinite",
+        clockHourHand: "clockHourHand 3s linear infinite ",
+        hideLoader: "hideLoader 1.5s 1.5s ease-in",
       },
     },
     screens: {
