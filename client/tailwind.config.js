@@ -28,7 +28,7 @@ module.exports = {
         hideLoader: {
           "0%": { opacity: "1" },
           "50%": { opacity: ".4" },
-          "90%": { opacity: "0" },
+          "100%": { opacity: "0" },
         },
       },
       animation: {

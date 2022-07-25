@@ -45,6 +45,7 @@ const MobileNavbarModal = ({ isOpen, setIsOpen }) => {
 
                             <nav className='w-full px-3'>
                                 <ul className='w-full flex flex-col gap-y-4 items-start text-secondary text-lg'>
+                                    <li><a href="#home" className='md:outline-none'>Home</a></li>
                                     <li><a href="#about" className='md:outline-none'>About</a></li>
                                     <li><a href='#work' className='md:outline-none'>Work</a></li>
                                     <li><a href='#contact' className='md:outline-none'>Contact</a></li>
