@@ -7,19 +7,19 @@ export const contactForm = yup
       .string()
       .min(2)
       .max(50)
-      .matches(/^([A-Za-z]+[\-'\s]?){2,50}$/g, {
+      .matches(/^([A-Za-z]+[-'\s]?){2,50}$/g, {
         message:
-          "Name must be between 2 and 50 characters. Only - ' special characters are accepted",
+          "name must be between 2 and 50 characters. Only - and ' special characters are accepted",
         excludeEmptyString: true,
       }),
     email: yup
       .string()
-      .email("That email is invalid")
-      .required("That email is invalid"),
+      .email("that email is invalid")
+      .required("that email is invalid"),
     subject: yup
       .string()
       .min(2)
-      .matches(/^([A-Za-z]+[\-'\s]?){2,50}$/g, {
+      .matches(/^([A-Za-z]+[-'\s]?){2,50}$/g, {
         message: "Subject must be between 2 and 50 characters",
         excludeEmptyString: true,
       }),
@@ -27,6 +27,6 @@ export const contactForm = yup
       .string()
       .min(10)
       .matches(/^(?!\s*$).+$/gm)
-      .required("Please enter at least a 10 characters message"),
+      .required("message must be at least 10 characters"),
   })
   .required();

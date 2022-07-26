@@ -1,4 +1,4 @@
-const submitForm = async (url, data) => {
+export const submitForm = async (url, data) => {
   const options = {
     method: "POST",
     headers: {
@@ -6,6 +6,7 @@ const submitForm = async (url, data) => {
     },
     body: JSON.stringify({ ...data }),
   };
+
   try {
     const res = await fetch(url, options);
     const data = await res.json();
