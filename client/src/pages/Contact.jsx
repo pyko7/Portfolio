@@ -10,11 +10,11 @@ const Contact = () => {
 
     return (
         <section id='contact'
-            className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center gap-y-16 md:justify-start md:overflow-hidden md:gap-y-8'>
+            className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center gap-y-16 text-secondary md:relative md:justify-start md:overflow-hidden md:gap-y-24'>
 
-            <h2 className='text-4xl text-secondary font-bold uppercase'>Contact me</h2>
+            <h2 tabIndex="0" className='text-4xl font-bold uppercase md:mt-40'> Contact me</h2>
 
-            <div className='w-10/12 flex items-start justify-around md:max-w-xl md:my-10 md:flex-row-reverse md:items-center md:px-6 md:gap-y-20 sm:max-w-lg'>
+            <div className='w-10/12 flex items-start justify-around md:max-w-xl md:flex-row-reverse md:items-center md:px-6 sm:max-w-lg'>
                 <div className='w-1/2 max-w-[550px] md:hidden'>
                     <ContactForm />
                 </div>
@@ -27,7 +27,7 @@ const Contact = () => {
             </div>
 
             <button
-                className='hidden md:block md:px-4 md:py-2 md:rounded-3xl md:text-[22px] md:uppercase md:bg-secondary md:text-primary md:font-bold'
+                className='hidden md:absolute md:bottom-20 md:left-1/2 md:-translate-x-1/2 md:w-fit md:block md:px-4 md:py-2 md:rounded-3xl md:text-[22px] md:uppercase md:bg-secondary md:text-primary md:font-bold sm:bottom-10'
                 onClick={() => setIsShowing(true)}>
                 Contact me
             </button>

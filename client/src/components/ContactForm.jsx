@@ -64,7 +64,7 @@ const ContactForm = () => {
                             onSubmit={handleSubmit(onSubmit)}>
 
                             <div className="w-full flex flex-col items-start gap-y-2">
-                                <input type="text" name="name" placeholder="Name" className="w-full h-14 p-5 rounded-[20px] text-xl outline-quaternary outline-2 focus:outline-double" {...register("name")} required />
+                                <input type="text" name="name" placeholder="Name" className="w-full h-14 p-5 rounded-[20px] text-xl outline-inputs" {...register("name")} required />
                                 {errors.name &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
                                         <ExclamationIcon className="w-5 h-5" />
@@ -73,7 +73,7 @@ const ContactForm = () => {
                                 }
                             </div>
                             <div className="w-full flex flex-col items-start gap-y-2">
-                                <input type="email" name="email" placeholder="Email address" className="w-full h-14 p-5 rounded-[20px] text-xl outline-quaternary outline-2 focus:outline-double" {...register("email")} required />
+                                <input type="email" name="email" placeholder="Email address" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("email")} required />
                                 {errors.email &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
                                         <ExclamationIcon className="w-5 h-5" />
@@ -82,7 +82,7 @@ const ContactForm = () => {
                                 }
                             </div>
                             <div className="w-full flex flex-col items-start gap-y-2">
-                                <input type="text" name="subject" placeholder="Subject" className="w-full h-14 p-5 rounded-[20px] text-xl outline-quaternary outline-2 focus:outline-double" {...register("subject")} required />
+                                <input type="text" name="subject" placeholder="Subject" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("subject")} required />
                                 {errors.subject &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
                                         <ExclamationIcon className="w-5 h-5" />
@@ -91,7 +91,7 @@ const ContactForm = () => {
                                 }
                             </div>
                             <div className="w-full flex flex-col items-start gap-y-2">
-                                <textarea name="message" placeholder="Write you message..." minLength='2' className="w-full min-h-[300px] p-5 rounded-[20px] text-xl outline-quaternary outline-2 focus:outline-double" {...register("message")} required />
+                                <textarea name="message" placeholder="Write you message..." minLength='2' className="w-full min-h-[300px] p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("message")} required />
 
                                 {errors.message &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">

@@ -23,7 +23,7 @@ module.exports = {
           "100%": { transform: "rotate(360deg)" },
         },
         clockHourHand: {
-          "100%": { transform: "rotate(60deg)" },
+          "100%": { transform: "rotate(360deg)" },
         },
         hideLoader: {
           "0%": { opacity: "1" },
@@ -34,7 +34,7 @@ module.exports = {
       animation: {
         slidein: "slidein 1s ease-in",
         clockMinuteHand: "clockMinuteHand 1.5s linear infinite",
-        clockHourHand: "clockHourHand 3s linear infinite ",
+        clockHourHand: "clockHourHand 6s linear infinite ",
         hideLoader: "hideLoader 1.5s 1.5s ease-in",
       },
     },

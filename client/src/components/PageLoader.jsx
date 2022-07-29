@@ -3,7 +3,7 @@ import SkipNavigation from './SkipNavigation';
 
 const PageLoader = ({ setLoader }) => {
     return (
-        <div className='fixed top-0 left-0 w-full h-screen bg-primary z-[100] overflow-hidden opacity-0 '>
+        <div className='fixed top-0 left-0 w-full h-screen bg-primary z-[100] overflow-hidden'>
             <div className='w-full h-full animate-hideLoader display flex items-center justify-center'>
                 <div onClick={() => setLoader(false)}>
                     <SkipNavigation />

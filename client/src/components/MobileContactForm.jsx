@@ -8,7 +8,6 @@ import ContactForm from './ContactForm';
 const MobileContactForm = ({ isShowing, setIsShowing }) => {
     return (
         <>
-
             <Transition show={isShowing}>
                 <Dialog onClose={() => setIsShowing(false)} className="hidden md:block">
                     {/* background opacity transition */}
@@ -29,9 +28,9 @@ const MobileContactForm = ({ isShowing, setIsShowing }) => {
                         leaveFrom="translate-y-0"
                         leaveTo="translate-y-full"
                     >
-                        <div className='fixed p-8 top-0 right-0  w-full flex justify-end z-40'>
-                            <XIcon className='md:top-0 md:right-0 md:w-10 md:h-10 md:text-secondary' aria-label="Close contact form" onClick={() => setIsShowing(false)} />
-                        </div>
+                        {/* <div className='fixed p-8 top-0 right-0  w-full flex justify-end z-40'>
+                            <XIcon tabIndex="0" className='md:top-0 md:right-0 md:w-10 md:h-10 md:text-secondary' aria-label="Close contact form" onClick={() => setIsShowing(false)} />
+                        </div> */}
                         <Dialog.Panel className='md:fixed md:w-full md:max-w-lg md:bottom-0 md:left-1/2 md:-translate-x-1/2 md:z-40'>
                             <ContactForm />
                         </Dialog.Panel>

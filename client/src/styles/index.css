@@ -7,6 +7,18 @@
 @layer base {
   html {
     font-family: "Syne", sans-serif;
+    scroll-behavior: smooth;
   }
 }
-/* @layer components {} */
+@layer components {
+  .outline-items{
+    padding:4px;
+    outline: 2px solid #DCD7C9;
+  }
+  .outline-inputs:focus-visible{
+    outline: 2px solid #A27B5C;
+  }
+  .outline-inputs:focus:not(:focus-visible){
+    outline: none
+  }
+}
