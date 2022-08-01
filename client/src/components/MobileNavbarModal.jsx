@@ -26,7 +26,7 @@ const MobileNavbarModal = ({ isOpen, setIsOpen }) => {
                     enter="ease-in-out duration-500 "
                     enterFrom="translate-x-full"
                     enterTo="translate-x-0"
-                    leave="ease-in duration-700 delay-100"
+                    leave="ease-in duration-500" 
                     leaveFrom="translate-x-0"
                     leaveTo="translate-x-full"
                     className='hidden sm:block sm:fixed sm:p-5 sm:right-0 sm:w-60 sm:top-0 sm:min-h-screen sm:bg-tertiary sm:z-50'
@@ -47,10 +47,10 @@ const MobileNavbarModal = ({ isOpen, setIsOpen }) => {
 
                             <nav className='w-full px-3'>
                                 <ul className='w-full flex flex-col gap-y-4 items-start text-secondary text-lg'>
-                                    <li><a href="#home" className='focus-visible:outline-items'>Home</a></li>
-                                    <li><a href="#about" className='focus-visible:outline-items'>About</a></li>
-                                    <li><a href='#work' className='focus-visible:outline-items'>Work</a></li>
-                                    <li><a href='#contact' className='focus-visible:outline-items'>Contact</a></li>
+                                    <li><a href="#home" className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Home</a></li>
+                                    <li><a href="#about" className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>About</a></li>
+                                    <li><a href='#work' className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Work</a></li>
+                                    <li><a href='#contact' className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Contact</a></li>
                                     <li className='w-fit px-4 py-2 mt-6 rounded-3xl bg-secondary text-primary font-medium'>
                                         <a href={Pdf} target='_blank' rel="noreferrer" className='focus-visible:outline-items focus-visible:outline-primary'>Resume</a>
                                     </li>

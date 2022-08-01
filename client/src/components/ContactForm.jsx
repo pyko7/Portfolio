@@ -60,11 +60,11 @@ const ContactForm = () => {
                         <form
                             id="form"
                             ref={ref}
-                            className="w-full p-8 flex flex-col items-center gap-y-8 rounded-[20px] bg-tertiary md:max-w-lg md:rounded-b-none"
+                            className="w-full p-8 flex flex-col items-center gap-y-8 rounded-[20px] text-black bg-tertiary md:max-w-lg md:rounded-b-none"
                             onSubmit={handleSubmit(onSubmit)}>
 
                             <div className="w-full flex flex-col items-start gap-y-2">
-                                <input type="text" name="name" placeholder="Name" className="w-full h-14 p-5 rounded-[20px] text-xl outline-inputs" {...register("name")} required />
+                                <input type="text" name="name" placeholder="Name" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("name")} required />
                                 {errors.name &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
                                         <ExclamationIcon className="w-5 h-5" />
@@ -91,7 +91,7 @@ const ContactForm = () => {
                                 }
                             </div>
                             <div className="w-full flex flex-col items-start gap-y-2">
-                                <textarea name="message" placeholder="Write you message..." minLength='2' className="w-full min-h-[300px] p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("message")} required />
+                                <textarea name="message" placeholder="Write you message..." minLength='2' className="w-full min-h-[300px] p-5 rounded-[20px] text-xl resize-none focus-visible:outline-inputs" {...register("message")} required />
 
                                 {errors.message &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">

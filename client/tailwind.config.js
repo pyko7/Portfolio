@@ -30,12 +30,17 @@ module.exports = {
           "50%": { opacity: ".4" },
           "100%": { opacity: "0" },
         },
+        navSlide: {
+          "0%": { width: "0" },
+          "100%": { width: "80%" },
+        },
       },
       animation: {
         slidein: "slidein 1s ease-in",
         clockMinuteHand: "clockMinuteHand 1.5s linear infinite",
         clockHourHand: "clockHourHand 6s linear infinite ",
         hideLoader: "hideLoader 1.5s 1.5s ease-in",
+        navSlide: "navSlide .25s ease-in alternate forwards",
       },
     },
     screens: {
