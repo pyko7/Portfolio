@@ -37,9 +37,9 @@ const submitContactForm = async (req, res, next) => {
       <p>Email: ${email}</p>
       `,
     });
-    res.status(200).json({ message: "Message sent to Julien" });
+    return res.status(200).json({ message: "Message sent to Julien" });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    return res.status(400).json({ error: error.message });
   }
 };
 

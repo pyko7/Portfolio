@@ -1,5 +1,6 @@
 import React from 'react';
-import photo from "../assets/images/photo.webp"
+import photo from "../assets/images/photo.webp";
+import mobilePhoto from "../assets/images/mobile-photo.webp";
 import SocialNetworkIconsContainer from '../components/SocialNetworkIconsContainer';
 import TechnoIconsContainer from '../components/TechnoIconsContainer';
 
@@ -10,10 +11,13 @@ const About = () => {
             <h2 tabIndex="0" className='text-4xl font-bold uppercase md:mt-40'>About me</h2>
 
             <div className='w-full flex items-start gap-x-24 lg:px-14 lg:gap-x-10 md:max-w-xl md:flex-col-reverse md:px-6 md:gap-y-8 sm:max-w-xl sm:px-10 sm:items-center sm:gap-y-10'>
-                
+
                 {/* image + social network icons container */}
                 <div className='w-1/2 flex flex-col items-end gap-y-5 lg:w-1/3 md:w-full md:items-center md:max-w-lg sm:max-w-xs'>
-                    <img src={photo} className="w-1/2 object-contain min-w-[350px] lg:w-[300px] lg:min-w-[auto]  sm:w-full sm:px-3" alt="julien henry" />
+                    <img src={photo}
+                        srcSet={`${photo} 500w, ${mobilePhoto} 320w`}
+                        sizes="(max-width:1023px) 300px, (max-width:639px) 320px"
+                        className="w-1/2 h-full object-contain min-w-[350px] lg:w-[300px] lg:min-w-[auto]  sm:w-full sm:px-3" alt="julien henry" />
                     <div className='w-1/2 min-w-[350px] flex items-end lg:w-[300px] lg:min-w-[auto] md:hidden'>
                         <SocialNetworkIconsContainer />
                     </div>

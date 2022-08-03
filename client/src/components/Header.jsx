@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Logo from './Logo';
 import Navbar from './Navbar';
-import { MenuAlt3Icon as MenuIcon } from '@heroicons/react/solid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import MobileNavbarModal from './MobileNavbarModal';
 import SkipNavigation from "../components/SkipNavigation";
 
@@ -16,8 +17,8 @@ const Header = () => {
             <div className='sm:hidden'>
                 <Navbar />
             </div>
-            <div className='hidden sm:block sm:w-8 sm:h-8 sm:text-secondary'>
-                <MenuIcon onClick={() => setIsOpen(true)} aria-label="Open navigation modal" />
+            <div className='hidden sm:block'>
+                <FontAwesomeIcon icon={faBars} className="sm:block sm:w-7 sm:h-7 sm:text-secondary" onClick={() => setIsOpen(true)} aria-label="Open navigation modal" />
                 <MobileNavbarModal isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
         </header>

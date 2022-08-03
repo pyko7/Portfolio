@@ -1,57 +1,57 @@
+import { useRef } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { contactForm } from "../validationSchema";
-import { ExclamationIcon } from "@heroicons/react/solid";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 import FormLoader from "./FormLoader";
 import FormError from "./FormError";
 import FormSuccess from "./FormSuccess";
-import { useState } from "react";
-import { useRef } from "react";
+import { postData } from "../api/submitForm";
 
 
 const ContactForm = () => {
-    const { register, getValues, handleSubmit, reset, formState: { isSubmitting, isSubmitSuccessful, errors } } = useForm({
+    const { register, getValues, handleSubmit, reset, formState: { errors } } = useForm({
         mode: 'onSubmit',
         resolver: yupResolver(contactForm),
     });
-    const [error, setErrorState] = useState(false)
-    const data = getValues();
     const ref = useRef(null)
-    const form = ref.current;
 
-    const onSubmit = async () => {
-        try {
-            const options = {
-                method: "POST",
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8",
-                },
-                body: JSON.stringify({ ...data }),
-            };
-            const res = await fetch('http://localhost:8080/api/contact', options);
-            const resData = await res.json();
-            return resData
-        } catch (error) {
-            setErrorState(true);
-            throw new Error('Failed to contact server')
+    const queryClient = useQueryClient()
+
+    const mutation = useMutation(postData, {
+        onSuccess: data => {
+            console.log(data);
+        },
+        onError: () => {
+            console.log(mutation.error.message);
+        },
+        onSettled: () => {
+            queryClient.invalidateQueries('create')
         }
+    });
+
+    const onSubmit = () => {
+        const data = getValues();
+        mutation.mutate(data)
     }
 
     const handleReset = () => {
-        if (error) return setErrorState(false);
-        else return reset(form)
+        mutation.reset();
+        return !mutation.isError ? reset() : null
     }
 
     return (
         <>
-            {isSubmitting ? <FormLoader /> :
-                error ?
+            {mutation.isLoading ? <FormLoader /> :
+                mutation.isError ?
                     <div className="w-full flex flex-col items-center gap-y-2">
                         <FormError />
                         <p className='text-lg text-secondary cursor-pointer hover:underline' onClick={() => handleReset()}>Retry</p>
                     </div>
                     :
-                    isSubmitSuccessful ?
+                    mutation.isSuccess ?
                         <div className="w-full flex flex-col items-center gap-y-2">
                             <FormSuccess />
                             <p className='text-base text-secondary cursor-pointer hover:underline' onClick={() => handleReset()} >Send a new message</p>
@@ -67,7 +67,7 @@ const ContactForm = () => {
                                 <input type="text" name="name" placeholder="Name" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("name")} required />
                                 {errors.name &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <ExclamationIcon className="w-5 h-5" />
+                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
                                         <p>{errors.name.message}</p>
                                     </div>
                                 }
@@ -76,7 +76,7 @@ const ContactForm = () => {
                                 <input type="email" name="email" placeholder="Email address" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("email")} required />
                                 {errors.email &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <ExclamationIcon className="w-5 h-5" />
+                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
                                         <p>{errors.email.message}</p>
                                     </div>
                                 }
@@ -85,7 +85,7 @@ const ContactForm = () => {
                                 <input type="text" name="subject" placeholder="Subject" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("subject")} required />
                                 {errors.subject &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <ExclamationIcon className="w-5 h-5" />
+                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
                                         <p>{errors.subject.message}</p>
                                     </div>
                                 }
@@ -95,7 +95,7 @@ const ContactForm = () => {
 
                                 {errors.message &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <ExclamationIcon className="w-5 h-5" />
+                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
                                         <p>{errors.message.message}</p>
                                     </div>
                                 }

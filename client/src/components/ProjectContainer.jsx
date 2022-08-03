@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { ExternalLinkIcon } from '@heroicons/react/outline';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import ProjectImageOverlay from './ProjectImageOverlay';
 
@@ -28,11 +28,11 @@ const ProjectContainer = ({ imageName, reverse }) => {
                 <p className='text-xl sm:text-lg'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis deserunt quos quam aperiam illo. Pariatur deserunt assumenda soluta veritatis distinctio dolores impedit autem velit, eligendi quibusdam necessitatibus, magnam quia praesentium!</p>
 
                 <div className={`w-full flex justify-start items-center gap-x-6 text-lg md:justify-end md:gap-x-8`}>
-                    <a href='https://github.com/pyko7/P7-Groupomania' className="w-6 h-6 flex items-center hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)] focus-visible:outline-items focus-visible:p-0">
-                        <FontAwesomeIcon icon={faGithub} aria-label="Github" className="h-full w-full" />
+                    <a href='https://github.com/pyko7/P7-Groupomania' aria-label="Github" className="w-6 h-6 flex items-center hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)] focus-visible:outline-items focus-visible:p-0">
+                        <FontAwesomeIcon icon={faGithub} className="h-full w-full" />
                     </a>
-                    <a href='#' className="w-6 h-6 flex items-center hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)] focus-visible:outline-items focus-visible:p-0">
-                        <ExternalLinkIcon aria-label="Groupomania website" className="h-full w-full" />
+                    <a href='#' aria-label="Groupomania website" className="w-6 h-6 flex items-center hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)] focus-visible:outline-items focus-visible:p-0">
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-full w-full" />
                     </a>
                 </div>
             </div>

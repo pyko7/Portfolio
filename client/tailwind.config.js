@@ -12,7 +12,7 @@ module.exports = {
       },
       keyframes: {
         slidein: {
-          "0%": { transform: "translateY(55%)", opacity: 0 },
+          "0%": { transform: "translateY(100%)", opacity: 0 },
           "75%": { opacity: 0.3 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },

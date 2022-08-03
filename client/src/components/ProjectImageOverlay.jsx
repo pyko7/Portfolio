@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { ExternalLinkIcon } from '@heroicons/react/outline';
 
 
@@ -11,7 +12,8 @@ const ProjectImageOverlay = () => {
                 <FontAwesomeIcon icon={faGithub} aria-label="Github" className="h-full w-full" />
             </a>
             <a href='#' className="w-8 h-8 flex items-center hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)]">
-                <ExternalLinkIcon aria-label="Groupomania website" className="h-full w-full" />
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-full w-full" />
+
             </a>
         </div>
     );
