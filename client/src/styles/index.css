@@ -11,14 +11,23 @@
   }
 }
 @layer components {
-  .outline-items{
-    padding:4px;
-    outline: 2px solid #DCD7C9;
+  .outline-items {
+    padding: 4px;
+    outline: 2px solid #dcd7c9;
   }
-  .outline-inputs:focus-visible{
-    outline: 2px solid #A27B5C;
+  .outline-inputs:focus-visible {
+    outline: 2px solid #a27b5c;
   }
-  .outline-inputs:focus:not(:focus-visible){
-    outline: none
+  .outline-inputs:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .word-spacing-0 {
+    word-spacing: normal;
+  }
+  .word-spacing-1 {
+    word-spacing: 16px;
   }
 }

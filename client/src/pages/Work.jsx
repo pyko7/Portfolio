@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from "../assets/images/photo.webp"
+
 import ProjectContainer from '../components/ProjectContainer';
 
 const Work = () => {
@@ -10,10 +10,10 @@ const Work = () => {
 
             <div className='w-full flex flex-col gap-y-16 md:gap-y-36 sm:gap-y-24'>
                 <div className='w-full'>
-                    <ProjectContainer imageName={photo} />
+                    <ProjectContainer />
                 </div>
                 <div className='w-full'>
-                    <ProjectContainer imageName={photo} reverse />
+                    <ProjectContainer reverse />
                 </div>
             </div>
         </section>

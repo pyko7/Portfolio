@@ -6,7 +6,7 @@ import TechnoIconsContainer from '../components/TechnoIconsContainer';
 
 const About = () => {
     return (
-        <section id='about' className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center gap-y-16  text-secondary'>
+        <section id='about' className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center gap-y-16 text-secondary'>
 
             <h2 tabIndex="0" className='text-4xl font-bold uppercase md:mt-40'>About me</h2>
 
@@ -26,8 +26,8 @@ const About = () => {
                 {/* text container */}
                 <div className='w-1/2 text-2xl text-justify lg:w-2/3 md:w-full md:h-auto sm:text-xl'>
                     <div className='w-8/12 flex flex-col gap-y-10 lg:w-full md:leading-snug sm:gap-y-7'>
-                        <p>Hey there, my name is Julien Henry. I live in France, more precisely in Burgundy. I’ve always been interested in computing and technology. One of my other passions is sport. After acquiring a bachelor degree to be physical education professor, I’ve realised that sport was just a hobby but not my future job.</p>
-                        <p>After months of solo learning, I’ve decided to do the web developer training course at OpenClassrooms. Following this, I’m currently looking for my first experience as a front end developer.</p>
+                        <p>Hey there, my name is Julien Henry. I live in France, more precisely in Burgundy. I’ve always been interested in computing and technology. One of my other passions is sport. After acquiring a bachelor degree to be physical education professor, I’ve realized that sport was just a hobby but not my future job.</p>
+                        <p>After months of solo learning, I’ve decided to take the web developer training course at OpenClassrooms. Following this, I’m currently looking for my first experience as a front end developer.</p>
                         <div className='flex flex-col gap-y-6 lg:w-full'>
                             <p tabIndex="0">My toolbox:</p>
                             <TechnoIconsContainer />
