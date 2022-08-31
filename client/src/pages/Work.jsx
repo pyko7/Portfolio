@@ -1,6 +1,7 @@
 import React from 'react';
-
 import ProjectContainer from '../components/ProjectContainer';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Work = () => {
     return (
@@ -13,7 +14,13 @@ const Work = () => {
                     <ProjectContainer />
                 </div>
                 <div className='w-full'>
-                    <ProjectContainer reverse />
+                    <ProjectContainer reverse githubOnly />
+                </div>
+
+                <div className='w-10/12 my-0 mx-auto text-lg '>
+                    <a href='https://github.com/pyko7' target="_blank" className='w-fit flex items-center gap-x-3 hover:underline'>More on Github
+                        <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
+                    </a>
                 </div>
             </div>
         </section>
