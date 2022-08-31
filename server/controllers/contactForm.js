@@ -2,19 +2,15 @@ const formSchema = require("../models/contactForm");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 
-let transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    type: "OAuth2",
-    user: process.env.CONTACTEMAIL,
-    pass: process.env.CONTACTPASSWORD,
-    clientId: process.env.OAUTH_CLIENTID,
-    clientSecret: process.env.OAUTH_CLIENT_SECRET,
-    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-  },
-});
-
 const submitContactForm = async (req, res, next) => {
+  const transporter = await nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.CONTACTEMAIL,
+      pass: process.env.CONTACTPASSWORD,
+    },
+  });
+
   const { name, email, subject, message } = req.body;
   try {
     await formSchema.contactForm.validate({
