@@ -7,7 +7,7 @@ import TechnoIconsContainer from '../components/TechnoIconsContainer';
 
 const About = () => {
     return (
-        <section id='about' className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center gap-y-16 text-secondary'>
+        <section id='about' className='w-full min-h-screen flex flex-col justify-center items-center gap-y-16 text-secondary'>
 
             <h2 tabIndex="0" className='text-4xl font-bold uppercase md:mt-40'>About me</h2>
 

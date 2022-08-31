@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Home = () => {
     return (
-        <section id='home' className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex justify-center items-center text-secondary md:items-start'>
+        <section id='home' className='w-full min-h-screen flex justify-center items-center text-secondary md:items-start'>
             <div className='w-10/12 h-fit flex flex-col gap-y-9 animate-slidein xl:ml-14 md:mt-48 md:ml-0 sm:mx-0 sm:px-4'>
                 <div className='w-fit flex flex-col gap-2.5 text-6xl md:text-5xl sm:gap-4'>
                     <h1>Hello, I'm <span className='text-white font-medium'>Julien Henry</span>.</h1>

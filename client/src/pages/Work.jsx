@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Work = () => {
     return (
-        <section id='work' className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center gap-y-16 text-secondary md:justify-start md:gap-y-24'>
+        <section id='work' className='w-full min-h-screen flex flex-col justify-center items-center gap-y-16 text-secondary md:justify-start md:gap-y-24'>
 
             <h2 tabIndex="0" className='text-4xl font-bold uppercase md:mt-40 sm:mt-36 '>My work</h2>
 
