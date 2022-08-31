@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
 
         <title>Julien Henry</title>
       </Head>
