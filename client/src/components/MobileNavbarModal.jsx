@@ -1,10 +1,10 @@
 import React from 'react';
+import Link from 'next/link';
 import { Transition } from '@headlessui/react'
 import { Dialog } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import SocialNetworkIconsContainer from './SocialNetworkIconsContainer';
-import Pdf from "../../public/assets/CV_Henry_Julien.pdf"
 
 
 
@@ -48,12 +48,22 @@ const MobileNavbarModal = ({ isOpen, setIsOpen }) => {
 
                             <nav className='w-full px-3'>
                                 <ul className='w-full flex flex-col gap-y-4 items-start text-secondary text-lg'>
-                                    <li><a href="#home" className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Home</a></li>
-                                    <li><a href="#about" className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>About</a></li>
-                                    <li><a href='#work' className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Work</a></li>
-                                    <li><a href='#contact' className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Contact</a></li>
+                                    <li>
+                                        <Link href="/">
+                                            <a className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Home</a>
+                                        </Link>
+                                    </li>
+                                    <Link href="#about">
+                                        <li><a className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>About</a></li>
+                                    </Link>
+                                    <Link href='#work'>
+                                        <li><a className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Work</a></li>
+                                    </Link>
+                                    <Link href='#contact'>
+                                        <li><a className='focus-visible:outline-items' onClick={() => setIsOpen(false)}>Contact</a></li>
+                                    </Link>
                                     <li className='w-fit px-4 py-2 mt-6 rounded-3xl bg-secondary text-primary font-medium'>
-                                        <a href={Pdf} target='_blank' rel="noreferrer" className='focus-visible:outline-items focus-visible:outline-primary'>Resume</a>
+                                        <a href="/assets/CV_Henry_Julien.pdf" target='_blank' rel="noreferrer" className='focus-visible:outline-items focus-visible:outline-primary'>Resume</a>
                                     </li>
                                 </ul>
                             </nav>

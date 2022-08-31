@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+export const Home = () => {
     return (
         <section id='home' className='w-full max-w-[1920px] min-h-screen my-0 mx-auto flex justify-center items-center text-secondary md:items-start'>
             <div className='w-10/12 h-fit flex flex-col gap-y-9 animate-slidein xl:ml-14 md:mt-48 md:ml-0 sm:mx-0 sm:px-4'>
@@ -18,5 +18,3 @@ const Home = () => {
         </section>
     );
 };
-
-export default Home;

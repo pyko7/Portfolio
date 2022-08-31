@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
+import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import ProjectImageOverlay from './ProjectImageOverlay';
-import grouposocialThumbnail from "../assets/images/grouposocial.webp"
-import movizThumbnail from "../assets/images/moviz.webp"
+import grouposocialThumbnail from "../../public/assets/images/grouposocial.webp"
+import movizThumbnail from "../../public/assets/images/moviz.webp"
 
 const ProjectContainer = ({ reverse, githubOnly }) => {
     const [overlay, setOverlay] = useState(false);
@@ -22,7 +23,9 @@ const ProjectContainer = ({ reverse, githubOnly }) => {
 
             <div className='relative w-1/2 h-full md:static md:w-10/12 md:max-w-xl md:px-6 sm:min-w-[280px] sm:px-0' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 {overlay && <ProjectImageOverlay reverse={reverse} githubOnly={githubOnly} />}
-                <img src={!reverse ? movizThumbnail : grouposocialThumbnail} className="absolute top-0 left-0 w-full h-full object-cover md:static md:max-h-[275px]" alt='Preview of website' />
+                <div className="absolute top-0 left-0 w-full h-full md:static md:max-h-[275px]">
+                    <Image src={!reverse ? movizThumbnail : grouposocialThumbnail} layout="fill" objectFit='cover' alt='Preview of website' />
+                </div>
             </div>
 
             <div className='w-1/2 h-full flex flex-col gap-y-5 text-2xl text-justify xl:text-xl md:w-full md:max-w-xl md:px-6 md:gap-y-4 sm:w-full'>

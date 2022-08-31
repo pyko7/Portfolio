@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#2C3639" />
         <meta
@@ -26,9 +26,9 @@ const Layout = ({ children }) => {
         <title>Julien Henry</title>
       </Head>
 
-      <div className="content dark:bg-neutral-900">
+      <div className="bg-primary">
         <Header />
-        <main className="w-full max-w-[1920px] min-h-screen my-0 mx-auto flex justify-center items-center text-secondary md:items-start">
+        <main className="w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center  text-secondary md:items-start">
           {children}
         </main>
       </div>

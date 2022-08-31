@@ -1,6 +1,7 @@
 import React from 'react';
-import photo from "../assets/images/photo.webp";
-import mobilePhoto from "../assets/images/mobile-photo.webp";
+import Image from "next/image";
+import photo from "../../public/assets/images/photo.webp";
+import mobilePhoto from "../../public/assets/images/mobile-photo.webp";
 import SocialNetworkIconsContainer from '../components/SocialNetworkIconsContainer';
 import TechnoIconsContainer from '../components/TechnoIconsContainer';
 
@@ -14,11 +15,15 @@ const About = () => {
 
                 {/* image + social network icons container */}
                 <div className='w-1/2 flex flex-col items-end gap-y-5 lg:w-1/3 md:w-full md:items-center md:max-w-lg sm:max-w-xs'>
-                    <img src={photo}
-                        srcSet={`${photo} 500w, ${mobilePhoto} 320w`}
-                        sizes="(max-width:1023px) 300px, (max-width:639px) 320px"
-                        className="w-1/2 h-full object-contain min-w-[350px] lg:w-[300px] lg:min-w-[auto]  sm:w-full sm:px-3" alt="julien henry" />
-                    <div className='w-1/2 min-w-[350px] flex items-end lg:w-full lg:min-w-[auto] md:hidden'>
+                    <div className="w-1/2 h-full min-w-[350px] lg:w-[250px] lg:min-w-[auto] sm:w-full sm:px-3" >
+                        <Image src={photo}
+                            layout="responsive"
+                            objectFit='cover'
+                            srcSet={`${photo} 500w, ${mobilePhoto} 320w`}
+                            sizes="(max-width:1023px) 300px, (max-width:639px) 320px"
+                            alt="julien henry" />
+                    </div>
+                    <div className='w-1/2 min-w-[350px] flex items-end lg:w-[250px] lg:min-w-[auto] md:hidden'>
                         <SocialNetworkIconsContainer />
                     </div>
                 </div>
