@@ -4,7 +4,7 @@ import { Dialog } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import SocialNetworkIconsContainer from './SocialNetworkIconsContainer';
-import Pdf from "../assets/CV_Henry_Julien.pdf"
+import Pdf from "../../public/assets/CV_Henry_Julien.pdf"
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Pdf from "../assets/CV_Henry_Julien.pdf"
+import Pdf from "../../public/assets/CV_Henry_Julien.pdf"
 
 const Navbar = () => {
     return (
