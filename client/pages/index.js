@@ -3,14 +3,28 @@ import { Home as HomeSection } from "../src/pages/Home";
 import About from "../src/pages/About";
 import Work from "../src/pages/Work";
 import Contact from "../src/pages/Contact";
+import PageLoader from "../src/components/PageLoader";
 
 const Home = () => {
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 3000);
+  }, []);
   return (
     <>
-      <HomeSection />
-      <About />
-      <Work />
-      <Contact />
+      {loader ? (
+        <PageLoader setLoader={setLoader} />
+      ) : (
+        <>
+          <HomeSection />
+          <About />
+          <Work />
+          <Contact />
+        </>
+      )}
     </>
   );
 };
