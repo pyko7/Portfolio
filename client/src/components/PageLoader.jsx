@@ -8,19 +8,17 @@ const PageLoader = ({ setLoader }) => {
                 <div onClick={() => setLoader(false)}>
                     <SkipNavigation />
                 </div>
-                <div className='relative w-72 h-72 border-secondary border-8 rounded-[50%] '>
-                    <div className='absolute top-0 left-0 w-full h-full bg-transparent animate-clockHourHand'>
-                        <div className='absolute top-1/2 left-1/2 w-1/3 h-3 -translate-y-1/2 bg-secondary' />
+
+                <div className="w-52 h-52 relative">
+                    <div className="w-32 h-64 absolute">
+                        <span className='w-52 h-52 border-t-secondary border-t-[16px] rounded-[50%] absolute top-0  animate-pageLoader drop-shadow-[0_0_2px_rgba(255,255,255,0.5)]'></span>
                     </div>
-                    <div className='absolute top-1/2 left-1/2 w-4 h-4 -translate-x-1/2 -translate-y-1/2 bg-quaternary rounded-[50%] z-10' />
-                    <div className='absolute top-0 left-0 w-full h-full bg-transparent animate-clockMinuteHand'>
-                        <div className='absolute top-1/2 left-1/2 w-3 h-2/5 -translate-x-1/2  bg-secondary' />
-                    </div>
+                    <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-9xl '>J</span>
                 </div>
             </div>
-        </div>
+
+        </div >
     );
 };
 
 export default PageLoader;
-

@@ -16,13 +16,12 @@ module.exports = {
           "75%": { opacity: 0.3 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
-        clockMinuteHand: {
+        pageLoader: {
+          "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+
         clockMinuteHand: {
-          "100%": { transform: "rotate(360deg)" },
-        },
-        clockHourHand: {
           "100%": { transform: "rotate(360deg)" },
         },
         hideLoader: {
@@ -37,9 +36,9 @@ module.exports = {
       },
       animation: {
         slidein: "slidein 1s ease-in",
+        pageLoader: "pageLoader 3s linear forwards infinite",
+        hideLoader: "hideLoader 1.5s 2s ease-in",
         clockMinuteHand: "clockMinuteHand 1.5s linear infinite",
-        clockHourHand: "clockHourHand 6s linear infinite ",
-        hideLoader: "hideLoader 1.5s 1.5s ease-in",
         navSlide: "navSlide .25s ease-in alternate forwards",
       },
     },
