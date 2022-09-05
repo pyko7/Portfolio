@@ -27,7 +27,7 @@ const Contact = () => {
             </div>
 
             <button
-                className='hidden md:absolute md:bottom-20 md:left-1/2 md:-translate-x-1/2 md:w-fit md:block md:px-4 md:py-2 md:rounded-3xl md:text-[22px] md:uppercase md:bg-secondary md:text-primary md:font-bold sm:bottom-10'
+                className='hidden md:min-w-[250px] md:absolute md:bottom-20 md:left-1/2 md:-translate-x-1/2 md:w-fit md:block md:px-4 md:py-2 md:rounded-3xl md:text-[22px] md:uppercase md:bg-secondary md:text-primary md:font-bold sm:bottom-10'
                 onClick={() => setIsShowing(true)}>
                 Contact me
             </button>

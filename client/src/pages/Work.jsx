@@ -9,7 +9,7 @@ const Work = () => {
 
             <h2 tabIndex="0" className='text-4xl font-bold uppercase md:mt-40 sm:mt-36 '>My work</h2>
 
-            <div className='w-full flex flex-col gap-y-16 md:gap-y-36 sm:gap-y-24'>
+            <div className='w-full flex flex-col gap-y-32 lg:gap-y-0 md:gap-y-36 sm:gap-y-24'>
                 <div className='w-full'>
                     <ProjectContainer />
                 </div>

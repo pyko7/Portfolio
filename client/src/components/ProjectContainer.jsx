@@ -22,9 +22,9 @@ const ProjectContainer = ({ reverse, githubOnly }) => {
         <article className={`w-10/12 h-[350px] my-0 mx-auto flex gap-x-9 ${reverse ? "flex-row-reverse" : ""} text-secondary md:w-full md:h-auto md:max-h-[450px] md:flex-col md:justify-center md:items-center md:gap-y-5 `}>
 
             <div className='relative w-1/2 h-full md:static md:w-10/12 md:max-w-xl md:px-6 sm:min-w-[280px] sm:px-0' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+                <div className="absolute top-0 left-0 w-full md:static md:max-h-[275px] overflow-hidden">
                 {overlay && <ProjectImageOverlay reverse={reverse} githubOnly={githubOnly} />}
-                <div className="absolute top-0 left-0 w-full h-full md:static md:max-h-[275px]">
-                    <Image src={!reverse ? movizThumbnail : grouposocialThumbnail} layout="responsive" objectFit='cover' alt='Preview of website' />
+                    <Image src={!reverse ? movizThumbnail : grouposocialThumbnail} layout="responsive" objectFit='fill' alt='Preview of website' />
                 </div>
             </div>
 
@@ -36,7 +36,7 @@ const ProjectContainer = ({ reverse, githubOnly }) => {
                         <p className='mt-2 word-spacing-1 text-lg xl:text-base italic lg:text-base '>NextJS <span className='word-spacing-0'>Tailwind CSS</span> <span className='word-spacing-0'>The Movie Database API</span> Vercel</p>
                     </div> :
                     <div>
-                        <p className='text-xl xl:text-lg text-white sm:text-lg'>Grouposocial is a social network built for a fictional company. The users can post their thoughts and interact with each other.</p>
+                        <p className='text-xl xl:text-lg text-white sm:text-lg'>Grouposocial is a social network built for a fictional company. Users can post their thoughts and interact with each other.</p>
                         <p className='mt-2 word-spacing-1 text-lg xl:text-base italic lg:text-base'>React  SASS  Express  MySQL</p>
                     </div>
                 }

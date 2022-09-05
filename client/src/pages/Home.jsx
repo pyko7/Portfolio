@@ -9,7 +9,7 @@ export const Home = () => {
                     <p className='text-5xl md:text-4xl sm:text-3xl'>I'm a front end developer.</p>
                 </div>
                 <div className='max-w-lg text-2xl text-justify sm:text-xl sm:leading-snug'>
-                    I love build accessible content to give every user a satisfying experience.
+                    I love building accessible content to give every user a satisfying experience.
                     I am currently looking for a full remote front end developer job.
                 </div>
 
