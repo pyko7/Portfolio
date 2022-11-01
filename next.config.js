@@ -16,4 +16,7 @@ module.exports = {
       },
     ];
   },
+  images: {
+    deviceSizes: [639, 767, 1023, 1199],
+  },
 };

@@ -6,7 +6,8 @@ import Contact from "../src/pages/Contact";
 import PageLoader from "../src/components/PageLoader";
 
 const Home = () => {
-  const [loader, setLoader] = useState(true);
+  // const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {

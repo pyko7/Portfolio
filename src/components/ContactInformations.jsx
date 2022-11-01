@@ -1,14 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+// import { faGithub } from '@fortawesome/free-brands-svg-icons';
+// import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+// import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const ContactInformations = () => {
     return (
         <ul className='w-full flex flex-col gap-y-10 items-start text-secondary text-justify'>
-            <li>
+            {/* <li>
                 <a href="mailto:julien.f.henry@gmail.com" target="_blank" rel='noreferrer' aria-label="Email me" className='w-fit flex items-center gap-x-2 text-lg focus-visible:outline-items'>
                     <FontAwesomeIcon icon={faEnvelope} className='w-7 h-7 hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)]' />
                     julien.f.henry@gmail.com
@@ -31,7 +31,7 @@ const ContactInformations = () => {
                 <FontAwesomeIcon icon={faGithub} aria-hidden='false' aria-label="Github" className='w-6 h-6 hover:drop-shadow-[0_2px_4px_rgba(220,215,201,0.64)]' />
                 Pyko7
             </a>
-        </li>
+        </li> */}
         </ul >
     );
 };

@@ -23,7 +23,7 @@ const ProjectContainer = ({ reverse, githubOnly }) => {
 
             <div className='relative w-1/2 h-full md:static md:w-10/12 md:max-w-xl md:px-6 sm:min-w-[280px] sm:px-0' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 <div className="absolute top-0 left-0 w-full md:static md:max-h-[275px] overflow-hidden">
-                {overlay && <ProjectImageOverlay reverse={reverse} githubOnly={githubOnly} />}
+                    {overlay && <ProjectImageOverlay reverse={reverse} githubOnly={githubOnly} />}
                     <Image src={!reverse ? movizThumbnail : grouposocialThumbnail} layout="responsive" objectFit='fill' alt='Preview of website' />
                 </div>
             </div>

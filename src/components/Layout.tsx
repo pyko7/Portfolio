@@ -1,7 +1,11 @@
 import Head from "next/head";
-import Header from "../components/Header";
+import { ReactNode } from "react";
+import Header from "./Header";
+import { useTheme } from "@mui/material/styles";
+import Container from "@mui/material/Container";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children?: ReactNode }) => {
+  const theme = useTheme();
   return (
     <>
       <Head>
@@ -21,16 +25,24 @@ const Layout = ({ children }) => {
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/assets/images/favicon.ico"
+        />
 
         <title>Julien Henry</title>
       </Head>
 
-      <div className="bg-primary">
+      <div
+        style={{
+          backgroundColor: theme.palette.primary.main,
+        }}
+      >
         <Header />
-        <main className="w-full max-w-[1920px] min-h-screen my-0 mx-auto flex flex-col justify-center items-center  text-secondary md:items-start">
+        {/* <Container component="main" sx={{ maxWidth: "1920px" }}>
           {children}
-        </main>
+        </Container> */}
       </div>
     </>
   );

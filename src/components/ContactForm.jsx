@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { contactForm } from "../validationSchema";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
+// import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 import FormLoader from "./FormLoader";
 import FormError from "./FormError";
 import FormSuccess from "./FormSuccess";
@@ -67,7 +67,7 @@ const ContactForm = () => {
                                 <input type="text" name="name" placeholder="Name" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("name")} required />
                                 {errors.name &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
+                                        {/* <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" /> */}
                                         <p>{errors.name.message}</p>
                                     </div>
                                 }
@@ -76,7 +76,7 @@ const ContactForm = () => {
                                 <input type="email" name="email" placeholder="Email address" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("email")} required />
                                 {errors.email &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
+                                        {/* <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" /> */}
                                         <p>{errors.email.message}</p>
                                     </div>
                                 }
@@ -85,7 +85,7 @@ const ContactForm = () => {
                                 <input type="text" name="subject" placeholder="Subject" className="w-full h-14 p-5 rounded-[20px] text-xl focus-visible:outline-inputs" {...register("subject")} required />
                                 {errors.subject &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
+                                        {/* <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" /> */}
                                         <p>{errors.subject.message}</p>
                                     </div>
                                 }
@@ -95,7 +95,7 @@ const ContactForm = () => {
 
                                 {errors.message &&
                                     <div className="w-full flex items-center gap-x-2 text-yellow-400">
-                                        <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" />
+                                        {/* <FontAwesomeIcon icon={faTriangleExclamation} className="w-5 h-5" /> */}
                                         <p>{errors.message.message}</p>
                                     </div>
                                 }

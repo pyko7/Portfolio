@@ -3,19 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.6.5",
     "@hookform/resolvers": "^2.9.6",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.11",
     "@tanstack/react-query": "^4.0.10",
-    "autoprefixer": "^10.4.8",
     "dotenv": "^16.0.2",
     "next": "^12.2.5",
     "nodemailer": "^6.7.8",
-    "postcss": "^8.4.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.33.1",
@@ -45,6 +47,8 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.1.8"
+    "@types/node": "18.11.8",
+    "@types/react": "18.0.24",
+    "typescript": "4.8.4"
   }
 }
