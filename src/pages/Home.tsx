@@ -21,7 +21,6 @@ export const Home = () => {
   const TextSection = styled(Box)({
     width: "50%",
     display: "flex",
-    justifyContent: "flex-end",
     marginTop: 120,
     [theme.breakpoints.down("md")]: {
       width: "55%",
