@@ -55,6 +55,9 @@ const TextContainer = () => {
     padding: "15px",
     backgroundColor: theme.palette.secondary.main,
     fontWeight: 700,
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light,
+    },
   }));
   return (
     <TextContainer>
