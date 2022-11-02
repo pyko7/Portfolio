@@ -40,9 +40,9 @@ const Layout = ({ children }: { children?: ReactNode }) => {
         }}
       >
         <Header />
-        {/* <Container component="main" sx={{ maxWidth: "1920px" }}>
+        <Container component="main" sx={{ maxWidth: "1920px" }}>
           {children}
-        </Container> */}
+        </Container>
       </div>
     </>
   );
