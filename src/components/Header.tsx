@@ -17,22 +17,23 @@ const Header = () => {
   const theme = useTheme();
   const isBiggerThanTablet = useMediaQuery(theme.breakpoints.up("md"));
 
-  const Appbar = styled(AppBar)(() => ({
+  const Appbar = styled(AppBar)({
     width: "100%",
     padding: isBiggerThanTablet ? "0 50px" : "0 20px",
     height: 90,
+    boxShadow: "none",
+  });
+
+  const ToolBar = styled(Toolbar)({
+    width: "100%",
+    height: "100%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    boxShadow: "none",
-  }));
+  });
 
   const DownloadLink = styled(Button)(() => ({
-    position: "absolute",
-    right: 0,
-    top: "50%",
-    transform: "translateY(-50%)",
     display: isBiggerThanTablet ? "block" : "none",
     margin: 0,
     color: theme.palette.fontColor.main,
@@ -47,16 +48,7 @@ const Header = () => {
   return (
     <Box component="header">
       <Appbar position="fixed">
-        <Toolbar
-          disableGutters
-          sx={{
-            width: 1,
-            height: 1,
-            position: "relative",
-            display: isBiggerThanTablet ? "block" : "flex",
-            justifyContent: "space-between",
-          }}
-        >
+        <ToolBar disableGutters>
           {/* <SkipNavigation /> */}
           <Logo />
           {isBiggerThanTablet ? (
@@ -74,7 +66,7 @@ const Header = () => {
           )}
 
           <DownloadLink variant="contained">Resume</DownloadLink>
-        </Toolbar>
+        </ToolBar>
       </Appbar>
     </Box>
   );

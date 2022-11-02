@@ -9,12 +9,8 @@ const Logo = () => {
   const isBiggerThanTablet = useMediaQuery(theme.breakpoints.up("md"));
 
   const Logo = styled(Typography)(({ theme }) => ({
-    position: "absolute",
-    left: "0",
-    top: "50%",
-    transform: isBiggerThanTablet ? "" : "translateY(-50%)",
-    width: isBiggerThanTablet ? 40 : 30,
-    height: isBiggerThanTablet ? 40 : 30,
+    width: 40,
+    height: 40,
     padding: "7px 9px 7px 7px",
     display: "flex",
     justifyContent: "center",
