@@ -49,7 +49,7 @@ const About = () => {
   });
 
   return (
-    <AboutContainer component="section">
+    <AboutContainer component="section" id="about">
       <TextSection>
         <TextContainer />
       </TextSection>

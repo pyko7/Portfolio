@@ -45,7 +45,7 @@ export const Home = () => {
   });
 
   return (
-    <HomeContainer component="section">
+    <HomeContainer component="section" id="home">
       <TextSection>
         <TextContainer />
       </TextSection>
