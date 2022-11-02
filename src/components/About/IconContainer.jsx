@@ -21,6 +21,7 @@ import { useMediaQuery } from "@mui/material"
 const IconContainer = () => {
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'))
+    const isMobile = useMediaQuery(theme.breakpoints.between('xs', 'sm'))
 
     const Title = styled(Typography)({
         fontSize: 38,
@@ -65,7 +66,7 @@ const IconContainer = () => {
             <Title variant="h2">My toolbox</Title>
 
 
-            <Grid container columns={isTablet ? 2 : 3} columnSpacing={1} rowSpacing={3} sx={{ width: 1, m: 0 }}  >
+            <Grid container columns={isMobile ? 2 : 3} columnSpacing={1} rowSpacing={3} sx={{ width: 1, m: 0 }}  >
                 <Grid item xs={1} >
                     <IconBackground  >
                         <TechnoIcon fontSize={isTablet ? "medium" : "large"} aria-label="html 5"><SiHtml5 /></TechnoIcon>
