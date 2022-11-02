@@ -16,6 +16,12 @@ const MobileNavbarMenu = ({ isOpen, setIsOpen }: drawerStateProps) => {
   const theme = useTheme();
   const pathnames = ["#home", "#about", "#work", "#contact"];
 
+  const Navbar = styled(Drawer)(({ theme }) => ({
+    "& .MuiDrawer-paper": {
+      backgroundColor: theme.palette.secondary.light,
+    },
+  }));
+
   const NavbarLink = styled(ListItemText)(() => ({
     padding: 0,
     fontSize: 15,
@@ -24,7 +30,7 @@ const MobileNavbarMenu = ({ isOpen, setIsOpen }: drawerStateProps) => {
   }));
 
   return (
-    <Drawer
+    <Navbar
       anchor="right"
       open={isOpen}
       onClose={(event, reason) => setIsOpen(false)}
@@ -35,14 +41,19 @@ const MobileNavbarMenu = ({ isOpen, setIsOpen }: drawerStateProps) => {
           top: 10,
           right: 10,
           color: theme.palette.fontColor.main,
+          zIndex: 1,
         }}
         onClick={() => setIsOpen(false)}
         aria-label="Close menu"
       >
         <CloseIcon fontSize="large" />
       </IconButton>
-
-      <List sx={{ width: 175, marginTop: 6 }}>
+      <List
+        sx={{
+          width: 175,
+          paddingTop: 6,
+        }}
+      >
         {pathnames.map((pathname) => {
           return (
             <ListItem key={pathname.slice(1)}>
@@ -59,23 +70,7 @@ const MobileNavbarMenu = ({ isOpen, setIsOpen }: drawerStateProps) => {
           );
         })}
       </List>
-
-      {/* <List>
-        {pathnames.map((pathname) => {
-          {
-            pathname === "/" ? (
-              <ListItemButton LinkComponent="a" key="Home">
-                <ListItemText primary="Home" />
-              </ListItemButton>
-            ) : (
-              <ListItemButton LinkComponent="a" key={pathname.slice(1)}>
-                <ListItemText primary={pathname} />
-              </ListItemButton>
-            );
-          }
-        })}
-      </List> */}
-    </Drawer>
+    </Navbar>
   );
 };
 

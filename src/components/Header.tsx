@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Logo from "./Logo";
-import Navbar from "./Navigation/Navbar";
+import Navbar from "./Header/Navbar";
 import SkipNavigation from "./SkipNavigation";
 import { styled, useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
@@ -9,7 +9,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import MobileNavbarMenu from "./Navigation/MobileNavbarMenu";
+import MobileNavbarMenu from "./Header/MobileNavbarMenu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
