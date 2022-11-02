@@ -39,6 +39,9 @@ const Header = () => {
     color: theme.palette.fontColor.main,
     backgroundColor: theme.palette.secondary.main,
     fontWeight: 700,
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light,
+    },
   }));
 
   const handleDrawer = () => {
