@@ -21,7 +21,7 @@ const Navbar = () => {
     <Navbar>
       {pathnames.map((pathname) => {
         return (
-          <NavbarLink variant="text" href={pathname}>
+          <NavbarLink variant="text" href={pathname} key={pathname}>
             {pathname.slice(1)}
           </NavbarLink>
         );

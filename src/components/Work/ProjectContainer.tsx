@@ -106,7 +106,11 @@ const ProjectContainer = ({
         <Description paragraph>{description}</Description>
         <Breadcrumbs aria-label="breadcrumb">
           {techno.map((tech) => {
-            return <Typography sx={{ fontStyle: "italic" }}>{tech}</Typography>;
+            return (
+              <Typography sx={{ fontStyle: "italic" }} key={tech}>
+                {tech}
+              </Typography>
+            );
           })}
         </Breadcrumbs>
       </ProjectDetails>
