@@ -4,10 +4,8 @@ import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
-import Slide from "@mui/material/Slide";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Project } from "~/src/utils/builtProject";
 
 const ProjectContainer = ({
@@ -46,31 +44,6 @@ const ProjectContainer = ({
     },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-    },
-  }));
-
-  const Overlay = styled(Box)(({ theme }) => ({
-    position: "absolute",
-    inset: 0,
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: theme.palette.secondary.dark,
-    borderRadius: 4,
-    opacity: 0.9,
-    zIndex: 2,
-  }));
-
-  const OverlayLinkIcon = styled(OpenInNewIcon)(({ theme }) => ({
-    fontSize: 52,
-    borderRadius: 4,
-    backgroundColor: theme.palette.primary.light,
-    color: theme.palette.fontColor.main,
-    opacity: 1,
-    "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
     },
   }));
 
@@ -117,16 +90,6 @@ const ProjectContainer = ({
           }, 100);
         }}
       >
-        {title == "Grouposocial" ? null : (
-          <Slide direction="right" in={overlay} mountOnEnter unmountOnExit>
-            <Overlay>
-              <a href={url} target="_blank" style={{ textDecoration: "none" }}>
-                <OverlayLinkIcon />
-              </a>
-            </Overlay>
-          </Slide>
-        )}
-
         <Image
           src={image}
           layout="fill"
