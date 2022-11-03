@@ -37,6 +37,7 @@ const Layout = ({ children }: { children?: ReactNode }) => {
       <div
         style={{
           backgroundColor: theme.palette.primary.main,
+          color: theme.palette.fontColor.main,
         }}
       >
         <Header />

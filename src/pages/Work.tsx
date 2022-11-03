@@ -1,41 +1,51 @@
-import React from "react";
-import ProjectContainer from "../components/ProjectContainer";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTheme, styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import ProjectContainer from "../components/Work/ProjectContainer";
+import { shopIt, moviz, grouposocial } from "../utils/builtProject";
 
 const Work = () => {
+  const theme = useTheme();
+
+  const WorkContainer = styled(Box)({
+    width: "100%",
+    maxWidth: "1920px",
+    minHeight: "100vh",
+    paddingTop: 90,
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.down("sm")]: {
+      margin: "50px 0",
+      padding: "0 20px",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+  });
+
+  const Title = styled(Typography)({
+    fontSize: 38,
+    marginBottom: 32,
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 34,
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 30,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 26,
+    },
+  });
+
   return (
-    <section
-      id="work"
-      className="w-full min-h-screen flex flex-col justify-center items-center gap-y-16 text-secondary md:justify-start md:gap-y-24"
-    >
-      <h2
-        tabIndex={0}
-        className="text-4xl font-bold uppercase md:mt-40 sm:mt-36 "
-      >
-        My work
-      </h2>
-
-      <div className="w-full flex flex-col gap-y-32 lg:gap-y-0 md:gap-y-36 sm:gap-y-24">
-        <div className="w-full">
-          {/* <ProjectContainer /> */}
-        </div>
-        <div className="w-full">
-          <ProjectContainer reverse githubOnly />
-        </div>
-
-        <div className="w-10/12 my-0 mx-auto text-lg ">
-          <a
-            href="https://github.com/pyko7"
-            target="_blank"
-            className="w-fit flex items-center gap-x-3 hover:underline"
-          >
-            More on Github
-            <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
-          </a>
-        </div>
-      </div>
-    </section>
+    <WorkContainer component="section">
+      <Title> My work </Title>
+      <Stack spacing={2}>
+        <ProjectContainer {...shopIt} />
+        <ProjectContainer {...moviz} />
+        <ProjectContainer {...grouposocial} />
+      </Stack>
+    </WorkContainer>
   );
 };
 
