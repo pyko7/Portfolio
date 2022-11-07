@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "./Logo";
 import Navbar from "./Header/Navbar";
-import SkipNavigation from "./SkipNavigation";
+import SkipNavigation from "./Header/SkipNavigation";
 import { styled, useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
@@ -52,7 +52,7 @@ const Header = () => {
     <Box component="header">
       <Appbar position="fixed">
         <ToolBar disableGutters>
-          {/* <SkipNavigation /> */}
+          <SkipNavigation />
           <Logo />
           {isBiggerThanTablet ? (
             <Navbar />
