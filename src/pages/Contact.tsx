@@ -1,43 +1,76 @@
-import React from "react";
-import { useState } from "react";
-import ContactForm from "../components/ContactForm";
-import ContactInformations from "../components/ContactInformations";
-import MobileContactForm from "../components/MobileContactForm";
+import { useTheme, styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import FormContainer from "../components/Contact/FormContainer";
+import ContactInformations from "../components/Contact/ContactInformations";
 
 const Contact = () => {
-  const [isShowing, setIsShowing] = useState(false);
+  const theme = useTheme();
+
+  const ContactContainer = styled(Box)({
+    width: "100%",
+    maxWidth: "1920px",
+    minHeight: "100vh",
+    marginTop: 120,
+    display: "flex",
+    flexDirection: "column",
+
+    [theme.breakpoints.down("lg")]: {
+      padding: "0 50px",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: "0 20px",
+    },
+    // [theme.breakpoints.down("sm")]: {
+    //   flexDirection: "column",
+    //   alignItems: "center",
+    // },
+  });
+
+  const Title = styled(Typography)({
+    fontSize: 38,
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 34,
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: 30,
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 26,
+    },
+  });
+
+  const FormSection = styled(Box)({
+    width: "100%",
+    marginTop: 75,
+    display: "flex",
+  });
+  const ContactSection = styled(Box)({
+    width: "100%",
+    marginTop: 60,
+    display: "flex",
+    justifyContent: "center",
+
+    [theme.breakpoints.down("lg")]: {
+      width: "45%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      marginTop: 75,
+    },
+  });
 
   return (
-    <section
-      id="contact"
-      className="w-full min-h-screen flex flex-col justify-center items-center gap-y-16 text-secondary md:relative md:justify-start md:overflow-hidden md:gap-y-24"
-    >
-      <h2 tabIndex={0} className="text-4xl font-bold uppercase md:mt-40">
-        Contact me
-      </h2>
-
-      <div className="w-10/12 flex items-start justify-around lg:w-11/12 lg:justify-between md:max-w-xl md:flex-row-reverse md:items-center md:px-6 sm:max-w-lg">
-        <div className="w-1/2 max-w-[550px] lg:w-3/5 lg:max-w-none md:hidden">
-          <ContactForm />
-        </div>
-        <div className="hidden md:block md:w-full md:max-w-[550px] sm:max-w-xs">
-          <MobileContactForm
-            isShowing={isShowing}
-            setIsShowing={setIsShowing}
-          />
-        </div>
-        <div className="w-fit md:max-w-lg sm:max-w-xs">
-          <ContactInformations />
-        </div>
-      </div>
-
-      <button
-        className="hidden md:min-w-[250px] md:absolute md:bottom-20 md:left-1/2 md:-translate-x-1/2 md:w-fit md:block md:px-4 md:py-2 md:rounded-3xl md:text-[22px] md:uppercase md:bg-secondary md:text-primary md:font-bold sm:bottom-10"
-        onClick={() => setIsShowing(true)}
-      >
-        Contact me
-      </button>
-    </section>
+    <ContactContainer component="section" id="contact">
+      <Title variant="h2">Contact me</Title>
+      
+      <FormSection>
+        <FormContainer />
+      </FormSection>
+      <ContactSection>
+        <ContactInformations />
+      </ContactSection>
+    </ContactContainer>
   );
 };
 
