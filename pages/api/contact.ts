@@ -1,7 +1,15 @@
-export default async function (req, res) {
+import { Request, Response } from "express";
+
+type FormValues = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
+export default async function (req: Request, res: Response) {
   require("dotenv").config();
   const nodemailer = require("nodemailer");
-  const validationSchema = require("../../src/validationSchema");
 
   const transporter = await nodemailer.createTransport({
     service: "gmail",
@@ -11,15 +19,8 @@ export default async function (req, res) {
     },
   });
 
-  const { name, email, subject, message } = req.body;
+  const { name, email, subject, message }: FormValues = req.body;
   try {
-    await validationSchema.contactForm.validate({
-      name: name,
-      email: email,
-      subject: subject,
-      message: message,
-    });
-
     await transporter.sendMail({
       from: `"${name}" ${email}`, // sender name + address
       to: process.env.CONTACTEMAIL,
