@@ -33,12 +33,20 @@ const Header = () => {
     alignItems: "center",
   });
 
-  const DownloadLink = styled(Button)(() => ({
+  const DownloadLink = styled("a")(() => ({
     display: isBiggerThanTablet ? "block" : "none",
-    margin: 0,
+    minWidth: 64,
+    padding: "6px 16px",
+    borderRadius: 4,
     color: theme.palette.fontColor.main,
     backgroundColor: theme.palette.secondary.main,
     fontWeight: 700,
+    fontSize: 14,
+    textDecoration: "none",
+    textTransform: "uppercase",
+    lineHeight: 1.5,
+    boxShadow:
+      "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
     "&:hover": {
       backgroundColor: theme.palette.secondary.light,
     },
@@ -67,8 +75,13 @@ const Header = () => {
               <MobileNavbarMenu {...drawerState} />
             </>
           )}
-
-          <DownloadLink variant="contained">Resume</DownloadLink>
+          <DownloadLink
+            href="/assets/CV_Henry_Julien.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </DownloadLink>
         </ToolBar>
       </Appbar>
     </Box>
