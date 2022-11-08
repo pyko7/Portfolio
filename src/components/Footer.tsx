@@ -1,11 +1,18 @@
-import React from 'react';
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const Footer = () => {
-    return (
-        <footer className='w-full h-8 text-center bg-primary text-secondary'>
-            <p>Designed and built by Julien Henry, 2022</p>
-        </footer>
-    );
+  const Footer = styled(Box)({
+    width: "100%",
+    height: 32,
+    textAlign: "center",
+  });
+  return (
+    <Footer component="footer">
+      <Typography>Designed and built by Julien Henry, 2022</Typography>
+    </Footer>
+  );
 };
 
 export default Footer;

@@ -8,6 +8,7 @@ import Divider from "@mui/material/Divider";
 import FormContainer from "../components/Contact/FormContainer";
 import ContactInformations from "../components/Contact/ContactInformations";
 import MobileContactForm from "../components/Contact/MobileContactForm";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   const [open, setOpen] = useState(false);
@@ -76,28 +77,31 @@ const Contact = () => {
   }));
 
   return (
-    <ContactContainer component="section" id="contact">
-      <Title variant="h2">Contact me</Title>
+    <>
+      <ContactContainer component="section" id="contact">
+        <Title variant="h2">Contact me</Title>
 
-      <FormSection>
-        {isMobile ? (
-          <MobileFormContainer>
-            <ContactButton variant="contained" onClick={() => setOpen(true)}>
-              Contact me here
-            </ContactButton>
-            <Box sx={{ width: 1 }}>
-              <Divider>OR</Divider>
-            </Box>
-          </MobileFormContainer>
-        ) : (
-          <FormContainer />
-        )}
-        <MobileContactForm {...mobileFormState} />
-      </FormSection>
-      <ContactSection>
-        <ContactInformations />
-      </ContactSection>
-    </ContactContainer>
+        <FormSection>
+          {isMobile ? (
+            <MobileFormContainer>
+              <ContactButton variant="contained" onClick={() => setOpen(true)}>
+                Contact me here
+              </ContactButton>
+              <Box sx={{ width: 1 }}>
+                <Divider>OR</Divider>
+              </Box>
+            </MobileFormContainer>
+          ) : (
+            <FormContainer />
+          )}
+          <MobileContactForm {...mobileFormState} />
+        </FormSection>
+        <ContactSection>
+          <ContactInformations />
+        </ContactSection>
+      </ContactContainer>
+      <Footer />
+    </>
   );
 };
 
