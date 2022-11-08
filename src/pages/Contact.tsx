@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { useTheme, styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
 import FormContainer from "../components/Contact/FormContainer";
 import ContactInformations from "../components/Contact/ContactInformations";
+import MobileContactForm from "../components/Contact/MobileContactForm";
 
 const Contact = () => {
+  const [open, setOpen] = useState(false);
+  const mobileFormState = { open, setOpen };
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const ContactContainer = styled(Box)({
     width: "100%",
@@ -16,15 +24,8 @@ const Contact = () => {
     flexDirection: "column",
 
     [theme.breakpoints.down("lg")]: {
-      padding: "0 50px",
-    },
-    [theme.breakpoints.down("md")]: {
       padding: "0 20px",
     },
-    // [theme.breakpoints.down("sm")]: {
-    //   flexDirection: "column",
-    //   alignItems: "center",
-    // },
   });
 
   const Title = styled(Typography)({
@@ -40,32 +41,58 @@ const Contact = () => {
     },
   });
 
-  const FormSection = styled(Box)({
+  const FormSection = styled(Box)(({ theme }) => ({
     width: "100%",
     marginTop: 75,
     display: "flex",
-  });
-  const ContactSection = styled(Box)({
+    [theme.breakpoints.down("lg")]: {
+      marginTop: 25,
+    },
+  }));
+  const ContactSection = styled(Box)(({ theme }) => ({
     width: "100%",
     marginTop: 60,
     display: "flex",
     justifyContent: "center",
-
-    [theme.breakpoints.down("lg")]: {
-      width: "45%",
-    },
     [theme.breakpoints.down("sm")]: {
-      width: "100%",
-      marginTop: 75,
+      marginTop: 25,
     },
-  });
+  }));
+
+  const MobileFormContainer = styled(Box)(({ theme }) => ({
+    width: "100%",
+    padding: "14px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }));
+
+  const ContactButton = styled(Button)(({ theme }) => ({
+    width: "100%",
+    maxWidth: 350,
+    height: 75,
+    marginBottom: 50,
+    backgroundColor: theme.palette.secondary.main,
+  }));
 
   return (
     <ContactContainer component="section" id="contact">
       <Title variant="h2">Contact me</Title>
-      
+
       <FormSection>
-        <FormContainer />
+        {isMobile ? (
+          <MobileFormContainer>
+            <ContactButton variant="contained" onClick={() => setOpen(true)}>
+              Contact me here
+            </ContactButton>
+            <Box sx={{ width: 1 }}>
+              <Divider>OR</Divider>
+            </Box>
+          </MobileFormContainer>
+        ) : (
+          <FormContainer />
+        )}
+        <MobileContactForm {...mobileFormState} />
       </FormSection>
       <ContactSection>
         <ContactInformations />
