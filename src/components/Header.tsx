@@ -67,6 +67,7 @@ const Header = () => {
           ) : (
             <>
               <IconButton
+                aria-label="Menu"
                 onClick={() => handleDrawer()}
                 sx={{ color: theme.palette.fontColor.main }}
               >

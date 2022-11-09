@@ -65,7 +65,7 @@ const TextContainer = () => {
         <Title variant="h2">
           Hello, I'm
           <span
-            style={{ color: theme.palette.secondary.dark, fontWeight: 500 }}
+            style={{ fontWeight: 500 }}
           >
             {" "}
             Julien Henry

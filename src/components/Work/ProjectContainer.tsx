@@ -15,8 +15,6 @@ const ProjectContainer = ({
   techno,
   url,
 }: Project) => {
-  const [overlay, setOverlay] = useState(false);
-
   const ProjectCard = styled(Card)(({ theme }) => ({
     width: "100%",
     height: 350,
@@ -82,14 +80,7 @@ const ProjectContainer = ({
 
   return (
     <ProjectCard>
-      <ImageContainer
-        onMouseOver={() => setOverlay(true)}
-        onMouseLeave={() => {
-          setTimeout(() => {
-            setOverlay(false);
-          }, 100);
-        }}
-      >
+      <ImageContainer>
         <Image
           src={image}
           layout="fill"

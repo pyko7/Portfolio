@@ -87,6 +87,28 @@ const ContactInformations = () => {
     },
   }));
 
+  const ItemWithoutLink = styled(Box)({
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontWeight: 500,
+    gap: 15,
+    textAlign: "center",
+    cursor: "pointer",
+
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light,
+    },
+    [theme.breakpoints.down("lg")]: {
+      gap: 7,
+    },
+    [theme.breakpoints.down("sm")]: {
+      padding: "0 25px",
+      justifyContent: "flex-start",
+    },
+  });
+
   const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
     props,
     ref
@@ -134,13 +156,10 @@ const ContactInformations = () => {
 
         <ItemContainer item xs={1}>
           <ItemBackground>
-            <Item
-              style={{ cursor: "pointer" }}
-              onClick={() => copyPhoneNumber()}
-            >
+            <ItemWithoutLink tabIndex={0} onClick={() => copyPhoneNumber()}>
               <LocalPhoneIcon aria-hidden="false" aria-label="Phone number" />
               +33 (0)6.26.05.10.58
-            </Item>
+            </ItemWithoutLink>
           </ItemBackground>
         </ItemContainer>
 

@@ -3,7 +3,7 @@ export interface Project {
   image: string;
   description: string;
   techno: string[];
-  url?: string;
+  url: string;
 }
 
 export const shopIt = {
@@ -37,4 +37,6 @@ export const grouposocial = {
   description:
     "Grouposocial is a social network built for a fictional company. Users can post their thoughts and interact with each other.",
   techno: ["React", "SASS", "NodeJS", "ExpressJS", "MySQL", "Prisma"],
+  url: "https://github.com/pyko7/Groupomania",
+
 };
