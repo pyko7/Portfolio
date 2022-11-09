@@ -29,6 +29,25 @@ const MobileNavbarMenu = ({ isOpen, setIsOpen }: drawerStateProps) => {
     color: theme.palette.fontColor.main,
   }));
 
+  const DownloadLink = styled("a")(() => ({
+    minWidth: 64,
+    padding: "6px 16px",
+    borderRadius: 4,
+    color: theme.palette.fontColor.main,
+    border: `1px solid ${theme.palette.secondary.dark}`,
+    backgroundColor: theme.palette.primary.light,
+    fontWeight: 700,
+    fontSize: 14,
+    textDecoration: "none",
+    textTransform: "uppercase",
+    lineHeight: 1.5,
+    boxShadow:
+      "0px 3px 1px -4px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light,
+    },
+  }));
+
   return (
     <Navbar
       anchor="right"
@@ -69,6 +88,15 @@ const MobileNavbarMenu = ({ isOpen, setIsOpen }: drawerStateProps) => {
             </ListItem>
           );
         })}
+        <ListItem>
+          <DownloadLink
+            href="/assets/CV_Henry_Julien.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </DownloadLink>
+        </ListItem>
       </List>
     </Navbar>
   );
