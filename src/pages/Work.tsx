@@ -38,7 +38,7 @@ const Work = () => {
   });
 
   return (
-    <WorkContainer component="section">
+    <WorkContainer component="section" id='work'>
       <Title> My work </Title>
       <Stack spacing={2}>
         <ProjectContainer {...shopIt} />
