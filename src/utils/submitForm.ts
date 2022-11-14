@@ -15,12 +15,11 @@ export const submitForm = async (body: FormValues) => {
       body: JSON.stringify({ ...body }),
     };
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      `/api/contact`,
       options
     );
     return await res.json();
   } catch (error) {
-    console.log(error);
     throw new Error("Failed to contact server");
   }
 };
