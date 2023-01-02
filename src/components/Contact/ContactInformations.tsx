@@ -126,7 +126,7 @@ const ContactInformations = () => {
         <ItemContainer item xs={1}>
           <ItemBackground>
             <Item
-              href="mailto:julien.f.henry@gmail.com"
+              href="mailto:julienhenry967@gmail.com"
               target="_blank"
               rel="noreferrer"
               aria-label="Email me"
@@ -134,7 +134,7 @@ const ContactInformations = () => {
               <Icon>
                 <EmailIcon />
               </Icon>
-              julien.f.henry@gmail.com
+              julienhenry967@gmail.com
             </Item>
           </ItemBackground>
         </ItemContainer>
