@@ -107,18 +107,6 @@ header::after {
   filter: blur(1px);
   animation: lightning-border 8s linear infinite;
 }
-/* header::before,
-header::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: -4px;
-  width: 20px;
-  height: 2px;
-  background-color: var(--main-font-color);
-  filter: blur(4px);
-  animation: lightning-border 10s linear infinite;
-} */
 
 .navbar {
   width: 100%;
@@ -160,6 +148,7 @@ header::after {
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1.5;
+  letter-spacing: 1.5px;
 }
 
 .navbar__link--text:hover {
