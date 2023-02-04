@@ -1,11 +1,9 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 import Header from "./Header";
-import { useTheme } from "@mui/material/styles";
 import Container from "@mui/material/Container";
 
 const Layout = ({ children }: { children?: ReactNode }) => {
-  const theme = useTheme();
   return (
     <>
       <Head>
@@ -34,12 +32,7 @@ const Layout = ({ children }: { children?: ReactNode }) => {
         <title>Julien Henry</title>
       </Head>
 
-      <div
-        style={{
-          backgroundColor: theme.palette.primary.main,
-          color: theme.palette.fontColor.main,
-        }}
-      >
+      <div className="layout">
         <Header />
         <Container component="main" sx={{ maxWidth: "1920px" }}>
           {children}
