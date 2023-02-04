@@ -58,10 +58,9 @@ h6 {
   --secondary-bg-color: #5f5f5c;
   --secondary-bg-color-light: #99999e;
 
-  --main-color: #da0037;
-  --main-color-2: #4c2410;
+  --main-color-de: #4c2410;
 
-  --header-border-width: 1px;
+  --header-border: 1px solid #99999e;
 }
 
 * {
@@ -75,18 +74,51 @@ h6 {
   color: var(--main-font-color);
 }
 
+/****HEADER SECTION****/
+
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 75px;
+  height: 85px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   backdrop-filter: blur(3px);
-  border-bottom: var(--header-border-width) solid #ededed;
+  border-bottom: var(--header-border);
   z-index: 50;
 }
+
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -4px;
+  width: 85px;
+  height: 2px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(255, 255, 255, 1) 95%
+  );
+  filter: blur(1px);
+  animation: lightning-border 8s linear infinite;
+}
+/* header::before,
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -4px;
+  width: 20px;
+  height: 2px;
+  background-color: var(--main-font-color);
+  filter: blur(4px);
+  animation: lightning-border 10s linear infinite;
+} */
 
 .navbar {
   width: 100%;
@@ -115,11 +147,11 @@ header {
 }
 
 .navbar__button_container--left_side {
-  border-right: var(--header-border-width) solid #ededed;
+  border-right: var(--header-border);
 }
 
 .navbar__button_container--right_side {
-  border-left: var(--header-border-width) solid #ededed;
+  border-left: var(--header-border);
 }
 
 .navbar__link--text {
@@ -157,4 +189,18 @@ header {
   border: 2px solid var(--main-font-color);
   border-radius: 50%;
   text-decoration: none;
+}
+
+@keyframes lightning-border {
+  0% {
+    left: -4px;
+  }
+
+  50% {
+    left: 50%;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
