@@ -27,7 +27,45 @@ header::after {
   }
 
   100% {
-    left: 100%;
+    left: 95%;
+  }
+}
+
+#first_name {
+  animation: first_name_translate 1.5s linear forwards;
+}
+#last_name {
+  animation: last_name_translate 1.5s linear forwards;
+}
+#third_title {
+  animation: title_appearance 0.75s ease-in forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes first_name_translate {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 33%;
+  }
+}
+
+@keyframes last_name_translate {
+  from {
+    right: -150px;
+  }
+  to {
+    right: 33%;
+  }
+}
+
+@keyframes title_appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

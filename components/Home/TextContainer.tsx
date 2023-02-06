@@ -1,29 +1,24 @@
 const TextContainer = () => {
   return (
-    <div className="w-3/4">
-      <div>
-        <h2 className="fontSize: 38">
-          Hello, I'm
-          <span style={{ fontWeight: 500 }}> Julien Henry</span>.
-        </h2>
-        <h3 className="fontSize: 32">I'm a front end developer.</h3>
-      </div>
-      <p className=" my-8,    fontSize: 22,">
-        I love building accessible content to give every user a satisfying
-        experience. I am currently looking for a full remote front end developer
-        job.
-      </p>
-
-      <a
-        href="#work"
-        className=' maxWidth: "220px",
-    padding: "15px",
-    backgroundColor: theme.palette.secondary.main,
-    fontWeight: 700,
-    "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
-    },'
+    <div className="relative w-full flex flex-col overflow-hidden">
+      <h2
+        className="absolute top-1/2 -translate-y-1/2 text-6xl"
+        id="first_name"
       >
+        Julien
+      </h2>
+      <h2 className="absolute top-1/2 -translate-y-1/2 text-6xl" id="last_name">
+        Henry
+      </h2>
+
+      <h3
+        className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-[55%] text-3xl opacity-0"
+        id="third_title"
+      >
+        Front end developer.
+      </h3>
+
+      <a href="#work" className="max-w-[220px] p-4 border-secondary">
         See my work
       </a>
     </div>
