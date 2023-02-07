@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" fixed top-0 w-full h-20 flex items-center justify-between backdrop-blur-sm border-b-[1px] border-secondary-bg-color-light z-50 sm:h-16">
+    <header className=" fixed top-0 w-full h-20 flex items-center justify-between bg-black/25 backdrop-blur-sm border-b-[1px] border-secondary-bg-color-light z-50 sm:h-16">
       <div className="w-1/4 h-full flex items-center justify-center border-r-[1px] border-secondary-bg-color-light sm:w-1/2 sm:px-8 sm:justify-start sm:border-r-0">
         <Logo />
       </div>
