@@ -9,112 +9,81 @@ import { SiMaterialui } from "react-icons/si";
 import { SiNodedotjs } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiFigma } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
 
 const IconContainer = () => {
   return (
-    <div className="w-full">
-      <h2 className="fontSize: 38, mb:32">My toolbox</h2>
-
-      <div className="w-full grid m-0">
-        <div>
-          <div>
-            <div aria-label="html 5">
-              <SiHtml5 />
-            </div>
-            <p>HTML5</p>
-          </div>
+    <div className="w-full md:w-3/4 sm:w-11/12">
+      <h2 className="text-4xl">My toolbox</h2>
+      <div className="w-full mt-10 grid grid-cols-4">
+        <div aria-label="HTML5" className="toolbox_items">
+          <SiHtml5 />
+          <p>HTML5</p>
+        </div>
+        <div aria-label="CSS3" className="toolbox_items">
+          <SiCss3 />
+          <p>CSS3</p>
+        </div>
+        <div aria-label="SASS" className="toolbox_items">
+          <SiSass />
+          <p>SASS</p>
+        </div>
+        <div aria-label="TailwindCSS" className="toolbox_items border-r-0">
+          <SiTailwindcss />
+          <p>TailwindCSS</p>
+        </div>
+        <div aria-label="Javascript" className="toolbox_items ">
+          <SiJavascript />
+          <p>Javascript</p>
+        </div>
+        <div aria-label="Typescript" className="toolbox_items">
+          <SiTypescript />
+          <p>Typescript</p>
+        </div>
+        <div aria-label="React" className="toolbox_items ">
+          <SiReact />
+          <p>React</p>
+        </div>
+        <div aria-label="NextJS" className="toolbox_items border-r-0">
+          <SiNextdotjs />
+          <p>NextJS</p>
         </div>
 
-        <div>
-          <div>
-            <div aria-label="css 3">
-              {" "}
-              <SiCss3 />
-            </div>
-            <p>CSS3</p>
-          </div>
+        <div aria-label="MUI" className="toolbox_items">
+          <SiMaterialui />
+          <p>MUI</p>
         </div>
-
-        <div>
-          <div>
-            <div aria-label="sass">
-              <SiSass />
-            </div>
-            <p>SASS</p>
-          </div>
+        <div aria-label="NodeJS" className="toolbox_items">
+          <SiNodedotjs />
+          <p>NodeJS</p>
         </div>
-
-        <div>
-          <div>
-            <div aria-label="javascript">
-              <SiJavascript />
-            </div>
-            <p>Javascript</p>
-          </div>
+        <div aria-label="Firebase" className="toolbox_items">
+          <SiFirebase />
+          <p>Firebase</p>
         </div>
-
-        <div>
-          <div>
-            <div aria-label="typescript">
-              <SiTypescript />
-            </div>
-            <p>Typescript</p>
-          </div>
+        <div aria-label="MongoDB" className="toolbox_items border-r-0">
+          <SiMongodb />
+          <p>MongoDB</p>
         </div>
-
-        <div>
-          <div>
-            <div aria-label="react">
-              <SiReact />
-            </div>
-            <p>React</p>
-          </div>
+        <div aria-label="MySQL" className="toolbox_items border-b-0">
+          <SiMysql />
+          <p>MySQL</p>
         </div>
-
-        <div>
-          <div>
-            <div aria-label="next js">
-              <SiNextdotjs />
-            </div>
-            <p>NextJS</p>
-          </div>
+        <div aria-label="Prisma" className="toolbox_items border-b-0">
+          <SiPrisma />
+          <p>Prisma</p>
         </div>
-
-        <div>
-          <div>
-            <div aria-label="mui">
-              <SiMaterialui />
-            </div>
-            <p>MUI</p>
-          </div>
+        <div aria-label="Github" className="toolbox_items border-b-0">
+          <SiGithub />
+          <p>Github</p>
         </div>
-
-        <div>
-          <div>
-            <div aria-label="node js">
-              <SiNodedotjs />
-            </div>
-            <p>NodeJS</p>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <div aria-label="github">
-              <SiGithub />
-            </div>
-            <p>Github</p>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <div aria-label="figma">
-              {" "}
-              <SiFigma />
-            </div>
-            <p>Figma</p>
-          </div>
+        <div aria-label="Figma" className="toolbox_items border-b-0 border-r-0">
+          <SiFigma />
+          <p>Figma</p>
         </div>
       </div>
     </div>

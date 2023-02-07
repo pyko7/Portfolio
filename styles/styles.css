@@ -43,6 +43,17 @@ header::after {
   animation-delay: 2.5s;
 }
 
+.toolbox_items {
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
 @keyframes lightning-border {
   0% {
     left: -150px;
@@ -108,6 +119,11 @@ header::after {
   #photo {
     animation: photo-translation 0.75s ease-out forwards;
     animation-delay: 1.25s;
+  }
+
+  .toolbox_items p {
+    flex-wrap: wrap;
+    font-size: 14px;
   }
 
   @keyframes lightning-border-mobile {
