@@ -6,6 +6,15 @@ export interface Project {
   url: string;
 }
 
+export const lflPickem = {
+  title: "LFL Pickem (beta)",
+  image: "/assets/images/projects/lfl_pickem.webp",
+  description:
+    "LFL Pickem is website where you can predict the winner of every games on each days of LFL, the french league of League of Legends. Sign up and play with us !",
+  techno: [""],
+  url: "https://lflpickem.julienhenry.fr",
+};
+
 export const shopIt = {
   title: "Shop-it!",
   image: "/assets/images/projects/shop-it.webp",
@@ -38,5 +47,4 @@ export const grouposocial = {
     "Grouposocial is a social network built for a fictional company. Users can post their thoughts and interact with each other.",
   techno: ["React", "SASS", "NodeJS", "ExpressJS", "MySQL", "Prisma"],
   url: "https://github.com/pyko7/Groupomania",
-
 };

@@ -1,36 +1,43 @@
 import Image from "next/image";
 import { Project } from "@/utils/builtProject";
 
-const ProjectContainer = ({
-  title,
-  image,
-  description,
-  techno,
-  url,
-}: Project) => {
-  return (
-    <div className="w-full, h-[350px], flex, flex-row, align-start">
-      <Image
-        src={image}
-        width={350}
-        height={250}
-        style={{ borderRadius: 4 }}
-        alt={`${title} project`}
-        quality={100}
-      />
+type ProjectProps = {
+  project: Project;
+  reverse?: boolean;
+};
 
-      <div className="w-1/2, flex, flex-column, flex-start, px-16">
-        <a href={url} target="_blank">
-          {title}
+const ProjectContainer = ({ project, reverse }: ProjectProps) => {
+  return (
+    <div
+      className={`w-full flex ${
+        reverse ? "flex-row-reverse" : ""
+      } md:flex-col md:gap-y-3`}
+    >
+      <div className="relative w-[720px] aspect-video lg:w-[680px] md:w-full">
+        <Image
+          fill
+          src={project.image}
+          alt={`${project.title} project`}
+          quality={100}
+        />
+      </div>
+
+      <div
+        className={`w-1/2 px-16 flex flex-col justify-center gap-8 ${
+          reverse ? "lg:pr-10 lg:pl-2" : "lg:pl-10 pr-2"
+        }  md:w-full md:px-1 md:gap-4`}
+      >
+        <a
+          href={project.url}
+          target="_blank"
+          className="text-5xl  hover:underline lg:text-4xl"
+        >
+          {project.title}
         </a>
-        <p className="my-16">{description}</p>
-        <div aria-label="breadcrumb">
-          {techno.map((tech) => {
-            return (
-              <p className="italic" key={tech}>
-                {tech}
-              </p>
-            );
+        <p>{project.description}</p>
+        <div className="w-full flex gap-4 italic flex-wrap lg:gap-y-1">
+          {project.techno.map((tech) => {
+            return <p key={tech}>{tech}</p>;
           })}
         </div>
       </div>
