@@ -14,15 +14,17 @@ module.exports = {
       sm: { max: "639px" },
       // => @media (max-width: 639px) { ... }
     },
-    colors: {
-      "main-bg-color": "#080a09",
-      "main-font-color": "#ededed",
-      "secondary-bg-color": "#5f5f5c",
-      "secondary-bg-color-light": "#99999e",
-      "third-color": "#ffae57",
-      "third-color-lighten": "#ffce9b",
+
+    extend: {
+      colors: {
+        "main-bg-color": "#080a09",
+        "main-font-color": "#ededed",
+        "secondary-bg-color": "#5f5f5c",
+        "secondary-bg-color-light": "#99999e",
+        "third-color": "#ffae57",
+        "third-color-lighten": "#ffce9b",
+      },
     },
-    extend: {},
   },
   plugins: [],
 };
