@@ -1,17 +1,17 @@
-import TextContainer from "./TextContainer";
 import ImageContainer from "./ImageContainer";
+import TextContainer from "./TextContainer";
 
 export const Home = () => {
   return (
     <section
-      className="w-full min-h-screen pt-15 flex"
+      className="section__container lg:px-5 sm:pt-16 sm:px-2 sm:flex-col sm:justify-around sm:items-center"
       id="home"
     >
-      <div className="w-1/2 flex">
+      <div className="w-1/2 flex md:w-3/4 sm:w-full">
         <TextContainer />
       </div>
 
-      <div className="w-1/2 flex mt-28">
+      <div className="w-1/2 flex items-center justify-center md:justify-end sm:w-full sm:justify-center">
         <ImageContainer />
       </div>
     </section>

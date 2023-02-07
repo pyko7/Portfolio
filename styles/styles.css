@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 header::before,
 header::after {
   content: "";
@@ -17,6 +21,28 @@ header::after {
   animation: lightning-border 8s linear infinite;
 }
 
+.section__container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+#first_name {
+  animation: first_name_translate 1.25s linear forwards;
+}
+#last_name {
+  animation: last_name_translate 1.25s linear forwards;
+}
+#third_title {
+  animation: title_appearance 0.75s ease-in forwards;
+  animation-delay: 1.5s;
+}
+
+#home_links {
+  animation: title_appearance 0.5s ease-in forwards;
+  animation-delay: 2.5s;
+}
+
 @keyframes lightning-border {
   0% {
     left: -150px;
@@ -31,32 +57,21 @@ header::after {
   }
 }
 
-#first_name {
-  animation: first_name_translate 1.5s linear forwards;
-}
-#last_name {
-  animation: last_name_translate 1.5s linear forwards;
-}
-#third_title {
-  animation: title_appearance 0.75s ease-in forwards;
-  animation-delay: 1.5s;
-}
-
 @keyframes first_name_translate {
   from {
-    left: -150px;
+    transform: translateX(-300px);
   }
   to {
-    left: 33%;
+    transform: translateX(0px);
   }
 }
 
 @keyframes last_name_translate {
   from {
-    right: -150px;
+    transform: translateX(300px);
   }
   to {
-    right: 33%;
+    transform: translateX(0px);
   }
 }
 
@@ -90,6 +105,11 @@ header::after {
     z-index: 101;
   }
 
+  #photo {
+    animation: photo-translation 0.75s ease-out forwards;
+    animation-delay: 1.25s;
+  }
+
   @keyframes lightning-border-mobile {
     0% {
       top: -150px;
@@ -101,6 +121,22 @@ header::after {
 
     100% {
       top: 100%;
+    }
+  }
+
+  @keyframes photo-translation {
+    0% {
+      opacity: 0;
+      transform: translateY(350px);
+    }
+
+    75% {
+      opacity: 0.3;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 }

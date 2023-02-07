@@ -19,6 +19,8 @@ module.exports = {
       "main-font-color": "#ededed",
       "secondary-bg-color": "#5f5f5c",
       "secondary-bg-color-light": "#99999e",
+      "third-color": "#ffae57",
+      "third-color-lighten": "#ffce9b",
     },
     extend: {},
   },
