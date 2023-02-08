@@ -4,7 +4,7 @@ import { shopIt, moviz, grouposocial, lflPickem } from "@/utils/builtProject";
 const Work = () => {
   return (
     <section
-      className="section__container pt-28 px-5 flex-col sm:px-2 sm:gap-12"
+      className="section__container pt-28 px-20 flex-col mb-52 lg:px-12 lg:mb-28 sm:px-2 sm:gap-12"
       id="work"
     >
       <h2 className="text-4xl"> My work </h2>

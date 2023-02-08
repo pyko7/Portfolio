@@ -1,7 +1,7 @@
 import { Home as HomeSection } from "../components/Home";
 import About from "../components/About";
 import Work from "../components/Work";
-import Contact from "../components/pages/Contact";
+import Contact from "../components/Contact";
 
 const Home = () => {
   return (

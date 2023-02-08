@@ -33,7 +33,7 @@ const Layout = ({ children }: { children?: ReactNode }) => {
 
       <div className="relative w-full bg-main-bg-color text-main-font-color ">
         <Header />
-        <main className="max-w-[1920px] my-0 mx-auto">{children}</main>
+        <main className="w-full">{children}</main>
       </div>
     </>
   );
