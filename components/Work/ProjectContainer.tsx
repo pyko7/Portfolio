@@ -13,12 +13,13 @@ const ProjectContainer = ({ project, reverse }: ProjectProps) => {
         reverse ? "flex-row-reverse" : ""
       } md:flex-col md:gap-y-3`}
     >
-      <div className="relative w-[720px] aspect-video lg:w-[680px] md:w-full">
+      <div className="relative w-[720px] aspect-video overflow-hidden lg:w-[680px] md:w-full">
         <Image
           fill
           src={project.image}
           alt={`${project.title} project`}
           quality={100}
+          className="hover:scale-125 duration-700"
         />
       </div>
 

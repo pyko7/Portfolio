@@ -1,9 +1,7 @@
-import { useState, forwardRef } from "react";
-
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "@/utils/validation/validationSchema";
-
 import { FormValues, submitForm } from "@/utils/submitForm";
 import { useMutation } from "@tanstack/react-query";
 
@@ -22,17 +20,6 @@ const ContactForm = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const handleClose = (
-    event?: React.SyntheticEvent | Event,
-    reason?: string
-  ) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setSuccess(false);
-    setError(false);
-  };
-
   const mutation = useMutation(submitForm, {
     onSuccess: () => {
       setSuccess(true);
@@ -48,151 +35,61 @@ const ContactForm = () => {
   };
 
   return (
-    <>
-      <form
-        className="w-full, maxW: [650px], m-auto, p-8,flex,  flexDirection: column, alignItems: center,
-    gap: 20,
-    borderRadius: 4,"
-        onSubmit={handleSubmit(onSubmit)}
+    <form
+      className="w-1/3 max-w-[650px] py-10 flex flex-col items-center justify-center gap-8 bg-main-bg-color lg:w-full lg:max-w-lg
+      sm:max-w-xs sm:bg-transparent sm:backdrop-blur-md"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className="w-11/12 max-w-md lg:max-w-sm">
+        <input
+          className="contact_form__input"
+          type="text"
+          placeholder="Name"
+          {...register("name")}
+          required
+        />
+
+        {errors.name ? <p>{`${errors.name.message}`}</p> : null}
+      </div>
+      <div className="w-11/12 max-w-md lg:max-w-sm">
+        <input
+          className="contact_form__input"
+          type="email"
+          placeholder="Email"
+          {...register("email")}
+          required
+        />
+
+        {errors.email ? <p>{`${errors.email.message}`}</p> : null}
+      </div>
+      <div className="w-11/12 max-w-md lg:max-w-sm">
+        <input
+          className="contact_form__input"
+          type="text"
+          placeholder="Subject"
+          {...register("subject")}
+          required
+        />
+
+        {errors.subject ? <p>{`${errors.subject.message}`}</p> : null}
+      </div>
+      <div className="w-11/12 max-w-md lg:max-w-sm">
+        <textarea
+          className="contact_form__input min-h-[125px] mt-3 py-3 border-[1px] border-secondary-bg-color sm:border-main-font-color"
+          placeholder="Write your message..."
+          {...register("message")}
+          required
+        />
+        {errors.message ? <p>{`${errors.message.message}`}</p> : null}
+      </div>
+
+      <button
+        className="w-full max-w-xs h-16 mt-8 text-main-bg-color bg-main-font-color font-bold"
+        type="submit"
       >
-        <div className=" w-full, maxW: [450px]">
-          <input
-            className=' width: "100%",
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: 4,
-    "& label": {
-      color: theme.palette.fontColor.main,
-    },
-    "& label.Mui-focused": {
-      color: theme.palette.fontColor.main,
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-    },'
-            type="text"
-            placeholder="Name"
-            {...register("name")}
-            required
-          />
-          {errors.name ? (
-            <p>{`${errors.name.message}`}</p>
-          ) : null}
-        </div>
-        <div className=" w-full, maxW: [450px]">
-          <input
-            className=' width: "100%",
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: 4,
-    "& label": {
-      color: theme.palette.fontColor.main,
-    },
-    "& label.Mui-focused": {
-      color: theme.palette.fontColor.main,
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-    },'
-            type="email"
-            placeholder="Email"
-            {...register("email")}
-            required
-          />
-          {errors.email ? (
-            <p>{`${errors.email.message}`}</p>
-          ) : null}
-        </div>
-        <div className=" w-full, maxW: [450px]">
-          <input
-            className=' width: "100%",
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: 4,
-    "& label": {
-      color: theme.palette.fontColor.main,
-    },
-    "& label.Mui-focused": {
-      color: theme.palette.fontColor.main,
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-    },'
-            type="text"
-            placeholder="Subject"
-            {...register("subject")}
-            required
-          />
-          {errors.subject ? (
-            <p>{`${errors.subject.message}`}</p>
-          ) : null}
-        </div>
-        <div className=" w-full, maxW: [450px]">
-          <textarea
-            className=' width: "100%",
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: 4,
-    "& label": {
-      color: theme.palette.fontColor.main,
-    },
-    "& label.Mui-focused": {
-      color: theme.palette.fontColor.main,
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: theme.palette.fontColor.main,
-      },
-    },'
-            placeholder="Write your message..."
-            {...register("message")}
-            required
-          />
-          {errors.message ? (
-            <p>{`${errors.message.message}`}</p>
-          ) : null}
-        </div>
-        <button
-          className=' marginTop: 10,
-    padding: "12px 20px",
-    fontWeight: 500,'
-          type="submit"
-        >
-          Send message
-        </button>
-      </form>
-      {/* {success ? (
-        <Snackbar open={success} autoHideDuration={6000} onClose={handleClose}>
-          <Alert
-            onClose={handleClose}
-            severity="success"
-            sx={{ width: "100%" }}
-          >
-            Message sent
-          </Alert>
-        </Snackbar>
-      ) : error ? (
-        <Snackbar open={error} autoHideDuration={6000} onClose={handleClose}>
-          <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
-            Failed to contact server
-          </Alert>
-        </Snackbar>
-      ) : null} */}
-    </>
+        Send message
+      </button>
+    </form>
   );
 };
 
