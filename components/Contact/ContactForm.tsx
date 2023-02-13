@@ -9,7 +9,7 @@ import { BiMessageAltError } from "react-icons/bi";
 
 const ContactForm = () => {
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
   const {
     register,
@@ -38,26 +38,30 @@ const ContactForm = () => {
 
   return (
     <form
-      className="w-1/3 max-w-[650px] py-10 flex flex-col items-center justify-center gap-8 bg-main-bg-color lg:w-full lg:max-w-lg
-      sm:max-w-xs sm:bg-transparent sm:backdrop-blur-md"
+      className="w-full flex flex-col items-center justify-center gap-8 sm:h-full sm:justify-evenly"
       onSubmit={handleSubmit(onSubmit)}
     >
-      {/* <form
-       className="w-1/3 max-w-[650px] py-10 flex flex-col items-center justify-center gap-8 bg-black/10 backdrop-blur-md lg:w-full lg:max-w-lg
-       sm:max-w-xs sm:bg-transparent sm:backdrop-blur-md"
-       onSubmit={handleSubmit(onSubmit)}
-     > */}
       {success ? (
         <div className="w-11/12 h-[450px] max-w-md flex flex-col justify-center items-center gap-8 lg:max-w-sm">
           <RiMailCheckFill className="w-10 h-10" />
           <p>Message sent to Julien. Thank you !</p>
-          <p className="text-third-color hover:text-third-color-lighten cursor-pointer" onClick={()=>setSuccess(false)}>Send a new message</p>
+          <p
+            className="text-third-color hover:text-third-color-lighten cursor-pointer"
+            onClick={() => setSuccess(false)}
+          >
+            Send a new message
+          </p>
         </div>
       ) : error ? (
         <div className="w-11/12 h-[450px] max-w-md flex flex-col justify-center items-center gap-8 lg:max-w-sm">
           <BiMessageAltError className="w-10 h-10" />
           <p>Sorry an error has occured</p>
-          <p className="text-third-color hover:text-third-color-lighten cursor-pointer" onClick={()=>setError(false)}>Try again</p>
+          <p
+            className="text-third-color hover:text-third-color-lighten cursor-pointer"
+            onClick={() => setError(false)}
+          >
+            Try again
+          </p>
         </div>
       ) : (
         <>
@@ -70,7 +74,9 @@ const ContactForm = () => {
               required
             />
 
-            {errors.name ? <p className="mt-2 text-red-400">{`${errors.name.message}`}</p> : null}
+            {errors.name ? (
+              <p className="mt-2 text-red-400">{`${errors.name.message}`}</p>
+            ) : null}
           </div>
           <div className="w-11/12 max-w-md lg:max-w-sm">
             <input
@@ -81,7 +87,9 @@ const ContactForm = () => {
               required
             />
 
-            {errors.email ? <p className="mt-2 text-red-400">{`${errors.email.message}`}</p> : null}
+            {errors.email ? (
+              <p className="mt-2 text-red-400">{`${errors.email.message}`}</p>
+            ) : null}
           </div>
           <div className="w-11/12 max-w-md lg:max-w-sm">
             <input
@@ -92,20 +100,24 @@ const ContactForm = () => {
               required
             />
 
-            {errors.subject ? <p className="mt-2 text-red-400">{`${errors.subject.message}`}</p> : null}
+            {errors.subject ? (
+              <p className="mt-2 text-red-400">{`${errors.subject.message}`}</p>
+            ) : null}
           </div>
           <div className="w-11/12 max-w-md lg:max-w-sm">
             <textarea
-              className="contact_form__input min-h-[125px] mt-3 py-3 border-[1px] border-secondary-bg-color sm:border-main-font-color"
+              className="contact_form__input min-h-[125px] mt-3 py-3 border-[1px] border-secondary-bg-color sm:border-main-font-color sm:min-h-[155px]"
               placeholder="Write your message..."
               {...register("message")}
               required
             />
-            {errors.message ? <p className="mt-2 text-red-400">{`${errors.message.message}`}</p> : null}
+            {errors.message ? (
+              <p className="mt-2 text-red-400">{`${errors.message.message}`}</p>
+            ) : null}
           </div>
 
           <button
-            className="w-full max-w-xs h-16 mt-8 text-main-bg-color bg-main-font-color font-bold"
+            className="w-full max-w-xs h-16 mt-8 text-main-bg-color bg-main-font-color font-bold sm:mt-0"
             type="submit"
           >
             {success ? "Message sent to Julien" : "Send message"}
