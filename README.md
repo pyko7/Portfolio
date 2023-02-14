@@ -1,6 +1,6 @@
 # Portfolio
 
-Welcome to the V2 of my [portfolio](https://www.julienhenry.fr) !
+Welcome to the V3 of my [portfolio](https://www.julienhenry.fr) !
 
 I'm Julien, a front end developer based in France 🇫🇷. I'm currently looking for my first professional experience as a front end developer in remote.
 I have interest in technology since a long time now and 1 year ago I've decided to quit my job and take a training course in web development.
@@ -11,7 +11,7 @@ You'll find more details about me on my [portfolio](https://www.julienhenry.fr) 
 ## Tech Stack
 
 - [NextJS](https://nextjs.org/)
-- [MUI](https://mui.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 - [React Query](https://tanstack.com/query/v4/?from=reactQueryV3&original=https://react-query-v3.tanstack.com/)
 - [React Hook Form](https://react-hook-form.com/)
 - [React-icons](https://react-icons.github.io/react-icons/)
