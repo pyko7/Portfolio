@@ -38,7 +38,7 @@ const ContactForm = () => {
 
   return (
     <form
-      className="w-full flex flex-col items-center justify-center gap-8 sm:h-full sm:justify-evenly"
+      className="w-full pt-10 flex flex-col items-center justify-center gap-8 sm:h-full sm:justify-evenly sm:pt-0"
       onSubmit={handleSubmit(onSubmit)}
     >
       {success ? (

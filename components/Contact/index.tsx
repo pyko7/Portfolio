@@ -25,7 +25,7 @@ const Contact = () => {
           <div className="w-full h-full flex flex-col items-start justify-start lg:gap-8">
             <h2 className="h-auto pt-28 text-4xl lg:h-auto">Contact me</h2>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[550px] py-10 flex flex-col items-center gap-8 bg-black/10 backdrop-blur-md overflow-hidden lg:max-w-lg ">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[550px] py-10 flex flex-col items-center gap-8 overflow-hidden before:content-[''] before:absolute before:w-full before:h-full  before:backdrop-blur-md before:bg-black/10 before:-z-[1]  lg:max-w-lg ">
               <ContactForm />
               <p className="form__divider relative uppercase">or</p>
               <a
@@ -59,7 +59,7 @@ const Contact = () => {
             </a>
           </div>
           {!visible ? null : (
-            <div className="sm:fixed sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:px-4 sm:pt-16 sm:w-full sm:h-screen sm:backdrop-blur-lg sm:bg-black/10">
+            <div className="sm:fixed sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:px-4 sm:pt-12 sm:w-full sm:h-screen sm:backdrop-blur-lg sm:bg-black/10">
               <AiOutlineClose
                 className="sm:fixed sm:top-5 sm:right-5 sm:w-8 sm:h-8 sm:text-main-font-color"
                 onClick={() => setVisible(false)}
