@@ -32,7 +32,10 @@ const IconContainer = () => {
           <SiSass />
           <p>SASS</p>
         </div>
-        <div aria-label="TailwindCSS" className="toolbox_items border-r-0">
+        <div
+          aria-label="TailwindCSS"
+          className="toolbox_items border-r-main-bg-color"
+        >
           <SiTailwindcss />
           <p>TailwindCSS</p>
         </div>
@@ -48,7 +51,10 @@ const IconContainer = () => {
           <SiReact />
           <p>React</p>
         </div>
-        <div aria-label="NextJS" className="toolbox_items border-r-0">
+        <div
+          aria-label="NextJS"
+          className="toolbox_items border-r-main-bg-color"
+        >
           <SiNextdotjs />
           <p>NextJS</p>
         </div>
@@ -65,23 +71,38 @@ const IconContainer = () => {
           <SiFirebase />
           <p>Firebase</p>
         </div>
-        <div aria-label="MongoDB" className="toolbox_items border-r-0">
+        <div
+          aria-label="MongoDB"
+          className="toolbox_items border-r-main-bg-color"
+        >
           <SiMongodb />
           <p>MongoDB</p>
         </div>
-        <div aria-label="MySQL" className="toolbox_items border-b-0">
+        <div
+          aria-label="MySQL"
+          className="toolbox_items border-b-main-bg-color"
+        >
           <SiMysql />
           <p>MySQL</p>
         </div>
-        <div aria-label="Prisma" className="toolbox_items border-b-0">
+        <div
+          aria-label="Prisma"
+          className="toolbox_items border-b-main-bg-color"
+        >
           <SiPrisma />
           <p>Prisma</p>
         </div>
-        <div aria-label="Github" className="toolbox_items border-b-0">
+        <div
+          aria-label="Github"
+          className="toolbox_items border-b-main-bg-color"
+        >
           <SiGithub />
           <p>Github</p>
         </div>
-        <div aria-label="Figma" className="toolbox_items border-b-0 border-r-0">
+        <div
+          aria-label="Figma"
+          className="toolbox_items border-b-main-bg-color border-r-main-bg-color"
+        >
           <SiFigma />
           <p>Figma</p>
         </div>

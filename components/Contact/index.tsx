@@ -45,7 +45,7 @@ const Contact = () => {
           {/* Mobile view */}
           <div className="hidden sm:w-full sm:px-4 sm:flex sm:flex-col sm:items-centers sm:justify-center sm:gap-8">
             <button
-              className="sm:w-full sm:max-w-xs sm:p-2 sm:bg-main-bg-color sm:text-3xl"
+              className="sm:w-full sm:max-w-xs sm:p-2 sm:bg-main-bg-color sm:text-3xl sm:mx-auto sm:my-0"
               onClick={() => setVisible(true)}
             >
               Contact me here
