@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <section
-        className="section__container relative max-w-none overflow-hidden"
+        className="relative w-full min-h-screen my-0 mx-auto flex max-w-none overflow-hidden"
         id="contact"
       >
         <video
