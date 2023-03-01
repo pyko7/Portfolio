@@ -7,12 +7,12 @@ export interface Project {
 }
 
 export const lflPickem = {
-  title: "LFL Pickem (beta)",
+  title: "LFL Pickem",
   image: "/assets/images/projects/lfl_pickem.webp",
   description:
     "LFL Pickem is website where you can predict the winner of every games on each days of LFL, the french league of League of Legends. Sign up and play with us !",
   techno: [""],
-  url: "https://lflpickem.julienhenry.fr",
+  url: "https://lflpickem.com",
 };
 
 export const shopIt = {
