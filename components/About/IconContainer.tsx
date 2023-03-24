@@ -5,7 +5,7 @@ import { SiJavascript } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { SiReact } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
-import { SiMaterialui } from "react-icons/si";
+import { SiMui } from "react-icons/si";
 import { SiNodedotjs } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiFigma } from "react-icons/si";
@@ -17,93 +17,72 @@ import { SiMongodb } from "react-icons/si";
 
 const IconContainer = () => {
   return (
-    <div className="w-full md:w-3/4 sm:w-11/12">
-      <h2 className="text-4xl">My toolbox</h2>
-      <div className="w-full mt-10 grid grid-cols-4">
-        <div aria-label="HTML5" className="toolbox_items">
-          <SiHtml5 />
+    <div className="w-full">
+      <h2 className="text-4xl md:text-3xl">My toolbox</h2>
+      <div className="w-full mt-10 grid grid-cols-4 md:grid-cols-2">
+        <div className="toolbox_items">
+          <SiHtml5 aria-hidden="true" />
           <p>HTML5</p>
         </div>
-        <div aria-label="CSS3" className="toolbox_items">
-          <SiCss3 />
+        <div className="toolbox_items">
+          <SiCss3 aria-hidden="true" />
           <p>CSS3</p>
         </div>
-        <div aria-label="SASS" className="toolbox_items">
-          <SiSass />
+        <div className="toolbox_items">
+          <SiSass aria-hidden="true" />
           <p>SASS</p>
         </div>
-        <div
-          aria-label="TailwindCSS"
-          className="toolbox_items border-r-main-bg-color"
-        >
-          <SiTailwindcss />
+        <div className="toolbox_items ">
+          <SiTailwindcss aria-hidden="true" />
           <p>TailwindCSS</p>
         </div>
-        <div aria-label="Javascript" className="toolbox_items ">
-          <SiJavascript />
+        <div className="toolbox_items ">
+          <SiJavascript aria-hidden="true" />
           <p>Javascript</p>
         </div>
-        <div aria-label="Typescript" className="toolbox_items">
-          <SiTypescript />
+        <div className="toolbox_items">
+          <SiTypescript aria-hidden="true" />
           <p>Typescript</p>
         </div>
-        <div aria-label="React" className="toolbox_items ">
-          <SiReact />
+        <div className="toolbox_items ">
+          <SiReact aria-hidden="true" />
           <p>React</p>
         </div>
-        <div
-          aria-label="NextJS"
-          className="toolbox_items border-r-main-bg-color"
-        >
-          <SiNextdotjs />
+        <div className="toolbox_items ">
+          <SiNextdotjs aria-hidden="true" />
           <p>NextJS</p>
         </div>
 
-        <div aria-label="MUI" className="toolbox_items">
-          <SiMaterialui />
+        <div className="toolbox_items">
+          <SiMui aria-hidden="true" />
           <p>MUI</p>
         </div>
-        <div aria-label="NodeJS" className="toolbox_items">
-          <SiNodedotjs />
+        <div className="toolbox_items">
+          <SiNodedotjs aria-hidden="true" />
           <p>NodeJS</p>
         </div>
-        <div aria-label="Firebase" className="toolbox_items">
-          <SiFirebase />
+        <div className="toolbox_items">
+          <SiFirebase aria-hidden="true" />
           <p>Firebase</p>
         </div>
-        <div
-          aria-label="MongoDB"
-          className="toolbox_items border-r-main-bg-color"
-        >
-          <SiMongodb />
+        <div className="toolbox_items ">
+          <SiMongodb aria-hidden="true" />
           <p>MongoDB</p>
         </div>
-        <div
-          aria-label="MySQL"
-          className="toolbox_items border-b-main-bg-color"
-        >
-          <SiMysql />
+        <div className="toolbox_items">
+          <SiMysql aria-hidden="true" />
           <p>MySQL</p>
         </div>
-        <div
-          aria-label="Prisma"
-          className="toolbox_items border-b-main-bg-color"
-        >
-          <SiPrisma />
+        <div className="toolbox_items">
+          <SiPrisma aria-hidden="true" />
           <p>Prisma</p>
         </div>
-        <div
-          aria-label="Github"
-          className="toolbox_items border-b-main-bg-color"
-        >
-          <SiGithub />
+        <div className="toolbox_items">
+          <SiGithub aria-hidden="true" />
           <p>Github</p>
         </div>
-        <div
-          aria-label="Figma"
-          className="toolbox_items border-b-main-bg-color border-r-main-bg-color"
-        >
-          <SiFigma />
+        <div className="toolbox_items ">
+          <SiFigma aria-hidden="true" />
           <p>Figma</p>
         </div>
       </div>

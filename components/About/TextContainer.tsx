@@ -1,7 +1,7 @@
 const TextContainer = () => {
   return (
     <div className="w-3/4 sm:w-11/12">
-      <h2 className="text-4xl">About me</h2>
+      <h2 className="text-4xl md:text-3xl">About me</h2>
 
       <div className="w-full mt-10 flex flex-col gap-10 sm:mt-6 sm:gap-6">
         <p className="text-xl">
