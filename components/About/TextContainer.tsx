@@ -7,8 +7,8 @@ const TextContainer = () => {
         <p className="text-xl">
           My name is Julien Henry. I live in France, more precisely in Burgundy.
           I’ve always been interested in computing and technology. One of my
-          other passions is sport. After acquiring a bachelor's degree to be a
-          physical education professor, I’ve realized that sport was just a
+          other passions is sport. After acquiring a bachelor&apos;s degree to
+          be a physical education professor, I’ve realized that sport was just a
           hobby but not my future job.
         </p>
         <p className="text-xl">
