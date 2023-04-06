@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
+import Icons from "./Icons";
 
 const Layout = ({ children }: { children?: ReactNode }) => {
   return (
@@ -31,9 +33,17 @@ const Layout = ({ children }: { children?: ReactNode }) => {
         <title>Julien Henry</title>
       </Head>
 
-      <div className="relative w-full bg-main-bg-color text-main-font-color ">
+      <div className="relative w-full h-screen bg-main-bg-color text-main-font-color">
         <Header />
-        <main className="w-full">{children}</main>
+        <div className="absolute left-[10%] -ml-[15px] top-[70%] z-[51] lg:left-[15%] lg:-ml-3 md:hidden">
+          <Icons />
+        </div>
+        <main className="w-full h-full flex items-center justify-center py-20">
+          <section className="w-4/5 h-full py-10 lg:w-[70%] sm:w-full">
+            {children}
+          </section>
+        </main>
+        <Footer />
       </div>
     </>
   );
