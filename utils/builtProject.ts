@@ -12,7 +12,7 @@ export const lflPickem = {
   description:
     "LFL Pickem is website where you can predict the winner of every games on each days of LFL, the french league of League of Legends. Sign up and play with us !",
   techno: [""],
-  url: "https://lflpickem.com",
+  url: "https://github.com/pyko7/LFL-Pickem",
 };
 
 export const shopIt = {
