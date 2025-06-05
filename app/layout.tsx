@@ -1,9 +1,9 @@
 import { Syne } from 'next/font/google'
 import { FC, PropsWithChildren } from 'react'
 import type { Metadata } from 'next'
-import Header from '@/components/header/Header'
 import Icons from '@/components/icons/Icons'
 import Footer from '@/components/footer/Footer'
+import HeaderWrapper from '@/components/header/HeaderWrapper'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => (
       suppressHydrationWarning
     >
       <div className="relative w-full h-screen bg-main-bg-color text-main-font-color">
-        <Header />
+        <HeaderWrapper />
         <div className="hidden absolute top-[70%] left-[15%] -ml-3 lg:-ml-[15px] md:flex z-[51] lg:left-[10%]">
           <Icons />
         </div>

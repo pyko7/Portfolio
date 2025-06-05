@@ -1,19 +1,10 @@
 import { Transition } from '@headlessui/react'
-import Link from 'next/link'
-import Icons from '../icons/Icons'
 import CloseButton from '../IconButtons/Close'
+import MobileNavbar from './MobileNavbar'
+import { useMobileNavbarContext } from './MobileNavbarContext'
 
-interface drawerStateProps {
-  open: boolean
-  setOpen: (open: boolean) => void
-}
-
-const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
-  const pathnames = ['home', 'work', 'contact']
-
-  const handleClick = () => {
-    setOpen(false)
-  }
+const MobileNavbarMenu = () => {
+  const { open, handleClick } = useMobileNavbarContext()
 
   return (
     <Transition show={open}>
@@ -25,6 +16,7 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
         leaveFrom="opacity-90"
         leaveTo="opacity-0"
         className="fixed top-0 left-0 w-full h-screen bg-main-bg-color opacity-90 z-[100]"
+        onClick={handleClick}
       />
       <Transition.Child
         enter="ease-in-out duration-500 "
@@ -38,27 +30,7 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
           border-l-secondary-bg-color-light z-[101]"
       >
         <CloseButton handleClick={handleClick} />
-
-        <nav className="w-full">
-          <ul className="w-1/2 mt-28 flex flex-col justify-around gap-7">
-            {pathnames.map((pathname) => (
-              <li
-                className="text-sm text-main-font-color no-underline uppercase leading-6 tracking-widest hover:font-semibold"
-                key={pathname}
-              >
-                <Link
-                  href={pathname === 'home' ? '/' : pathname}
-                  onClick={handleClick}
-                >
-                  {pathname}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-            <Icons />
-          </div>
-        </nav>
+        <MobileNavbar />
       </Transition.Child>
     </Transition>
   )
