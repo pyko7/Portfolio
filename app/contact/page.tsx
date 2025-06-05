@@ -4,17 +4,17 @@ import { FC, useState } from 'react'
 const Contact: FC = () => {
   const [icon, setIcon] = useState(false)
   return (
-    <div className="w-full h-full flex items-center justify-between overflow-hidden lg:flex-col lg:justify-center lg:gap-10">
-      <div className="w-1/2 lg:w-full">
+    <div className=" w-full h-full flex flex-col gap-10 items-center justify-center overflow-hidden lg:flex-row lg:justify-between">
+      <div className="w-full lg:w-1/2 ">
         <div className="w-full flex flex-col items-center justify-center gap-6 uppercase opacity-0 animate-fadeIn">
           <h2 className="text-4xl uppercase">Contact</h2>
         </div>
       </div>
 
-      <div className="w-1/2 h-full flex items-center justify-center animate-fastFadeIn opacity-0 lg:w-full lg:justify-center">
+      <div className="w-full h-full flex items-center justify-center animate-fastFadeIn opacity-0 lg:w-1/2">
         <a
           aria-label="send me an email"
-          href="mailto:julienhenry967@gmail.com"
+          href="mailto:julienprohenry@gmail.com"
           onMouseOver={() => setIcon(true)}
           onMouseOut={() => setIcon(false)}
         >

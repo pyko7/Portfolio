@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <nav className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center">
-      <ul className="w-full flex items-center justify-center gap-20 list-none md:gap-10 sm:hidden">
+      <ul className="hidden w-full items-center justify-center gap-10 list-none sm:flex md:gap-20">
         {pathnames.map((pathname) => (
           <li
             className="text-sm text-main-font-color no-underline uppercase leading-6 tracking-widest hover:font-semibold"

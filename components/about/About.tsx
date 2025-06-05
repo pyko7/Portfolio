@@ -4,14 +4,14 @@ import { FC } from 'react'
 const About: FC = () => (
   <div className="w-full flex flex-col items-center justify-center gap-6 uppercase overflow-hidden">
     <div className="w-full flex justify-center gap-4">
-      <h2 className="text-6xl animate-translateToRight sm:text-4xl">Julien</h2>
-      <h2 className="text-6xl animate-translateToLeft sm:text-4xl">Henry</h2>
+      <h2 className="text-4xl animate-translateToRight sm:text-6xl">Julien</h2>
+      <h2 className="text-4xl animate-translateToLeft sm:text-6xl">Henry</h2>
     </div>
 
-    <div className="w-full flex justify-center text-3xl opacity-0 animate-fastFadeIn sm:text-lg">
+    <div className="w-full flex justify-center text-lg opacity-0 animate-fastFadeIn sm:text-3xl">
       <h3>Front end developer.</h3>
     </div>
-    <div className="w-full -ml-[8px] flex justify-center gap-4 text-xl text-third-color opacity-0 animate-fastFadeIn sm:text-base">
+    <div className="w-full -ml-[8px] flex justify-center gap-4 text-base text-third-color opacity-0 animate-fastFadeIn sm:text-xl">
       <Link
         href="/contact"
         className="hover:underline after:content-['>'] 
