@@ -11,7 +11,8 @@ const eslintConfig = [
     rules: {
       semi: ['error', 'never'],
       quotes: ['error', 'single', { avoidEscape: true }],
-      'no-useless-return': 'error'
+      'no-useless-return': 'error',
+      'arrow-body-style': ['error', 'as-needed']
     }
   })
 ]
