@@ -1,11 +1,11 @@
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
-import Icons from '../Icons'
+import Icons from '../icons/Icons'
 import CloseButton from '../IconButtons/Close'
 
 interface drawerStateProps {
-  open: boolean;
-  setOpen: (open: boolean) => void;
+  open: boolean
+  setOpen: (open: boolean) => void
 }
 
 const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
@@ -39,7 +39,8 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
 
         <nav className="w-full">
           <ul className="w-1/2 mt-28 flex flex-col justify-around gap-7">
-            {pathnames.map((pathname) => pathname === 'resume' ? (
+            {pathnames.map((pathname) =>
+              pathname === 'resume' ? (
                 <li
                   className="text-sm text-main-font-color no-underline uppercase leading-6 tracking-widest hover:font-semibold"
                   key={pathname}
@@ -65,7 +66,8 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
                     {pathname}
                   </Link>
                 </li>
-              ))}
+              ),
+            )}
           </ul>
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
             <Icons />

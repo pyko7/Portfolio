@@ -1,13 +1,14 @@
-import { useState } from 'react'
+'use client'
+import { FC, useState } from 'react'
 import Logo from '../Logo'
-import Navbar from '@/components/Navbar'
-import MobileNavbarMenu from '@/components/Navbar/MobileNavbarMenu'
+import Navbar from '@/components/navbar/Navbar'
+import MobileNavbarMenu from '@/components/navbar/MobileNavbarMenu'
 
-const Header = () => {
+const Header: FC = () => {
   const [open, setOpen] = useState(false)
   const openProps = { open, setOpen }
 
-  const handleClick = () => open ? setOpen(false) : setOpen(true)
+  const handleClick = () => (open ? setOpen(false) : setOpen(true))
 
   return (
     <header className="fixed top-0 w-full h-20 flex items-center justify-between border-b-[1px] border-secondary-bg-color-light z-50 sm:h-16 sm:px-4">

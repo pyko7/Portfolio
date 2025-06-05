@@ -1,6 +1,7 @@
-import { useState } from 'react'
+'use client'
+import { FC, useState } from 'react'
 
-const Contact = () => {
+const Contact: FC = () => {
   const [icon, setIcon] = useState(false)
   return (
     <div className="w-full h-full flex items-center justify-between overflow-hidden lg:flex-col lg:justify-center lg:gap-10">

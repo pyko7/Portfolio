@@ -1,8 +1,9 @@
-import { grouposocial, lflPickem, moviz, shopIt } from '@/utils/builtProject'
-import ProjectContainer from '@/components/Work/ProjectContainer'
-import { useCallback, useEffect, useRef, useState } from 'react'
+'use client'
+// import { grouposocial, lflPickem, moviz, shopIt } from '@/utils/builtProject'
+// import Work from '@/components/work/Work'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
 
-const Work = () => {
+const Work: FC = () => {
   const [scrollY, setScrollY] = useState(0)
   const [scrollEnd, setScrollEnd] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -43,20 +44,21 @@ const Work = () => {
         className="w-1/2 h-full flex overflow-y-auto lg:w-full lg:justify-center"
         onScroll={handleScroll}
       >
-        <ul className="project_animation w-full h-full pr-[21%] flex flex-col gap-10 lg:px-4">
+        {/* TODO: MAP */}
+        {/* <ul className="project_animation w-full h-full pr-[21%] flex flex-col gap-10 lg:px-4">
           <li>
-            <ProjectContainer project={lflPickem} />
+            <Work project={lflPickem} />
           </li>
           <li>
-            <ProjectContainer project={moviz} />
+            <Work project={moviz} />
           </li>
           <li>
-            <ProjectContainer project={shopIt} />
+            <Work project={shopIt} />
           </li>
           <li>
-            <ProjectContainer project={grouposocial} />
+            <Work project={grouposocial} />
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   )
