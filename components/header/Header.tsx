@@ -11,17 +11,17 @@ const Header: FC = () => {
   const handleClick = () => (open ? setOpen(false) : setOpen(true))
 
   return (
-    <header className="fixed top-0 w-full h-20 flex items-center justify-between border-b-[1px] border-secondary-bg-color-light z-50 sm:h-16 sm:px-4">
-      <div className="w-[10%] p-0 h-full flex items-center justify-center z-10 lg:w-[15%] sm:w-1/2 sm:justify-start">
+    <header className="fixed h-16 px-4 top-0 w-full flex items-center justify-between border-b-[1px] border-secondary-bg-color-light z-50 sm:px-0">
+      <div className="w-1/2 p-0 h-full flex items-center z-10 lg:w-[10%] sm:w-[15%] sm:justify-center">
         <Logo />
       </div>
-      <div className="hidden sm:block">
+      <div className="block sm:hidden">
         <MobileNavbarMenu {...openProps} />
       </div>
 
       <Navbar />
 
-      <div className="w-[10%] h-full flex items-center justify-center uppercase leading-6 tracking-widest text-main-font-color lg:w-[15%] hover:font-semibold sm:hidden">
+      <div className="w-[15%] h-full hidden items-center justify-center uppercase leading-6 tracking-widest text-main-font-color sm:flex lg:w-[10%] hover:font-semibold">
         <a
           className="navbar__link--text z-10"
           href="/assets/CV_Henry_Julien.pdf"
@@ -31,7 +31,7 @@ const Header: FC = () => {
           Resume
         </a>
       </div>
-      <div className="hidden sm:w-1/2 sm:flex sm:justify-end sm:border-l-0 sm:text-main-font-color">
+      <div className="w-1/2 flex justify-end border-l-0 text-main-font-color sm:hidden">
         <button aria-label="menu" onClick={handleClick}>
           <svg
             aria-hidden="true"

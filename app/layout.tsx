@@ -1,3 +1,4 @@
+import { Syne } from 'next/font/google'
 import { FC, PropsWithChildren } from 'react'
 import type { Metadata } from 'next'
 import Header from '@/components/header/Header'
@@ -16,16 +17,23 @@ export const metadata: Metadata = {
   },
 }
 
+const syne = Syne({
+  subsets: ['latin'],
+})
+
 const RootLayout: FC<PropsWithChildren> = ({ children }) => (
   <html lang="en">
-    <body className="w-full min-h-screen" suppressHydrationWarning>
+    <body
+      className={`w-full min-h-screen ${syne.className}`}
+      suppressHydrationWarning
+    >
       <div className="relative w-full h-screen bg-main-bg-color text-main-font-color">
         <Header />
-        <div className="absolute left-[10%] -ml-[15px] top-[70%] z-[51] lg:left-[15%] lg:-ml-3 md:hidden">
+        <div className="hidden absolute top-[70%] left-[15%] -ml-3 lg:-ml-[15px] md:flex z-[51] lg:left-[10%]">
           <Icons />
         </div>
         <main className="w-full h-full flex items-center justify-center py-20">
-          <section className="w-4/5 h-full py-10 lg:w-[70%] sm:w-full">
+          <section className="w-full h-full py-10 sm:w-[70%] lg:4/5">
             {children}
           </section>
         </main>
