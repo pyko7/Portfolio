@@ -23,7 +23,7 @@ const Work = () => {
   }, []);
 
   useEffect(() => {
-    handleScroll;
+    handleScroll();
   }, [handleScroll]);
 
   return (
