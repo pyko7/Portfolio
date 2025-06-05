@@ -21,16 +21,6 @@ const Header: FC = () => {
 
       <Navbar />
 
-      <div className="w-[15%] h-full hidden items-center justify-center uppercase leading-6 tracking-widest text-main-font-color sm:flex lg:w-[10%] hover:font-semibold">
-        <a
-          className="navbar__link--text z-10"
-          href="/assets/CV_Henry_Julien.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Resume
-        </a>
-      </div>
       <div className="w-1/2 flex justify-end border-l-0 text-main-font-color sm:hidden">
         <button aria-label="menu" onClick={handleClick}>
           <svg

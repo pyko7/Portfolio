@@ -9,9 +9,11 @@ interface drawerStateProps {
 }
 
 const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
-  const pathnames = ['home', 'work', 'contact', 'resume']
+  const pathnames = ['home', 'work', 'contact']
 
-  const handleClick = () => setOpen(false)
+  const handleClick = () => {
+    setOpen(false)
+  }
 
   return (
     <Transition show={open}>
@@ -39,35 +41,19 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
 
         <nav className="w-full">
           <ul className="w-1/2 mt-28 flex flex-col justify-around gap-7">
-            {pathnames.map((pathname) =>
-              pathname === 'resume' ? (
-                <li
-                  className="text-sm text-main-font-color no-underline uppercase leading-6 tracking-widest hover:font-semibold"
-                  key={pathname}
+            {pathnames.map((pathname) => (
+              <li
+                className="text-sm text-main-font-color no-underline uppercase leading-6 tracking-widest hover:font-semibold"
+                key={pathname}
+              >
+                <Link
+                  href={pathname === 'home' ? '/' : pathname}
+                  onClick={handleClick}
                 >
-                  <a
-                    href="/assets/CV_Henry_Julien.pdf"
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={handleClick}
-                  >
-                    Resume
-                  </a>
-                </li>
-              ) : (
-                <li
-                  className="text-sm text-main-font-color no-underline uppercase leading-6 tracking-widest hover:font-semibold"
-                  key={pathname}
-                >
-                  <Link
-                    href={pathname === 'home' ? '/' : pathname}
-                    onClick={handleClick}
-                  >
-                    {pathname}
-                  </Link>
-                </li>
-              ),
-            )}
+                  {pathname}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
             <Icons />
