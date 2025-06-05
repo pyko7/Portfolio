@@ -1,11 +1,10 @@
-import Head from "next/head";
-import { ReactNode } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Icons from "./Icons";
+import Head from 'next/head'
+import { ReactNode } from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import Icons from './Icons'
 
-const Layout = ({ children }: { children?: ReactNode }) => {
-  return (
+const Layout = ({ children }: { children?: ReactNode }) => (
     <>
       <Head>
         <meta charSet="utf-8" />
@@ -46,7 +45,6 @@ const Layout = ({ children }: { children?: ReactNode }) => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
 
-export default Layout;
+export default Layout

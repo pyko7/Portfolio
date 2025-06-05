@@ -1,5 +1,4 @@
-const EmailButton = () => {
-  return (
+const EmailButton = () => (
     <a aria-label="send me an email" href="mailto:julienhenry967@gmail.com">
       <svg
         aria-hidden="true"
@@ -17,7 +16,6 @@ const EmailButton = () => {
         />
       </svg>
     </a>
-  );
-};
+  )
 
-export default EmailButton;
+export default EmailButton

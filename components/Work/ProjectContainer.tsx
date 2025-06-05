@@ -1,13 +1,12 @@
-import Image from "next/image";
-import { Project } from "@/utils/builtProject";
+import Image from 'next/image'
+import { Project } from '@/utils/builtProject'
 
 type ProjectProps = {
   project: Project;
 };
 
-const ProjectContainer = ({ project }: ProjectProps) => {
-  return (
-    <div className={`w-full flex justify-end`}>
+const ProjectContainer = ({ project }: ProjectProps) => (
+    <div className={'w-full flex justify-end'}>
       <a
         href={project.url}
         target="_blank"
@@ -22,7 +21,6 @@ const ProjectContainer = ({ project }: ProjectProps) => {
         />
       </a>
     </div>
-  );
-};
+  )
 
-export default ProjectContainer;
+export default ProjectContainer

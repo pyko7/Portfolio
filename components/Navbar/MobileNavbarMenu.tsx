@@ -1,7 +1,7 @@
-import { Transition } from "@headlessui/react";
-import Link from "next/link";
-import Icons from "../Icons";
-import CloseButton from "../IconButtons/Close";
+import { Transition } from '@headlessui/react'
+import Link from 'next/link'
+import Icons from '../Icons'
+import CloseButton from '../IconButtons/Close'
 
 interface drawerStateProps {
   open: boolean;
@@ -9,11 +9,9 @@ interface drawerStateProps {
 }
 
 const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
-  const pathnames = ["home", "work", "contact", "resume"];
+  const pathnames = ['home', 'work', 'contact', 'resume']
 
-  const handleClick = () => {
-    return setOpen(false);
-  };
+  const handleClick = () => setOpen(false)
 
   return (
     <Transition show={open}>
@@ -41,8 +39,7 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
 
         <nav className="w-full">
           <ul className="w-1/2 mt-28 flex flex-col justify-around gap-7">
-            {pathnames.map((pathname) => {
-              return pathname === "resume" ? (
+            {pathnames.map((pathname) => pathname === 'resume' ? (
                 <li
                   className="text-sm text-main-font-color no-underline uppercase leading-6 tracking-widest hover:font-semibold"
                   key={pathname}
@@ -62,14 +59,13 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
                   key={pathname}
                 >
                   <Link
-                    href={pathname === "home" ? "/" : pathname}
+                    href={pathname === 'home' ? '/' : pathname}
                     onClick={handleClick}
                   >
                     {pathname}
                   </Link>
                 </li>
-              );
-            })}
+              ))}
           </ul>
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
             <Icons />
@@ -77,7 +73,7 @@ const MobileNavbarMenu = ({ open, setOpen }: drawerStateProps) => {
         </nav>
       </Transition.Child>
     </Transition>
-  );
-};
+  )
+}
 
-export default MobileNavbarMenu;
+export default MobileNavbarMenu

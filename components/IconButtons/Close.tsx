@@ -2,8 +2,7 @@ type Props = {
   handleClick: () => void;
 };
 
-const CloseButton = ({ handleClick }: Props) => {
-  return (
+const CloseButton = ({ handleClick }: Props) => (
     <button aria-label="close menu" onClick={handleClick}>
       <svg
         aria-hidden="true"
@@ -21,7 +20,6 @@ const CloseButton = ({ handleClick }: Props) => {
         />
       </svg>
     </button>
-  );
-};
+  )
 
-export default CloseButton;
+export default CloseButton

@@ -1,8 +1,7 @@
-import About from "@/components/About";
-import RootLayout from "./layout";
+import About from '@/components/About'
+import RootLayout from './layout'
 
-const Home = () => {
-  return (
+const Home = () => (
     <RootLayout>
       <div className="w-full h-full flex items-center justify-between lg:flex-col lg:justify-center lg:gap-20">
         <div className="w-1/2 lg:w-full sm:w-full">
@@ -15,7 +14,6 @@ const Home = () => {
         </div>
       </div>
     </RootLayout>
-  );
-};
+  )
 
-export default Home;
+export default Home

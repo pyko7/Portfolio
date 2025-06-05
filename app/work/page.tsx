@@ -1,35 +1,35 @@
-import { grouposocial, lflPickem, moviz, shopIt } from "@/utils/builtProject";
-import ProjectContainer from "@/components/Work/ProjectContainer";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { grouposocial, lflPickem, moviz, shopIt } from '@/utils/builtProject'
+import ProjectContainer from '@/components/Work/ProjectContainer'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const Work = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [scrollEnd, setScrollEnd] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const [scrollY, setScrollY] = useState(0)
+  const [scrollEnd, setScrollEnd] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
 
   const handleScroll = useCallback(() => {
     if (!ref.current) {
-      return;
+      return
     }
-    setScrollY(ref.current.scrollTop);
+    setScrollY(ref.current.scrollTop)
     if (
       Math.floor(ref.current.scrollHeight - ref.current.scrollTop) <=
       ref.current.offsetHeight
     ) {
-      setScrollEnd(true);
+      setScrollEnd(true)
     } else {
-      setScrollEnd(false);
+      setScrollEnd(false)
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
-    handleScroll();
-  }, [handleScroll]);
+    handleScroll()
+  }, [handleScroll])
 
   return (
     <div
-      className={`${scrollY === 0 ? "before:opacity-0" : ""}
-      ${scrollEnd ? "after:opacity-0" : "after:opacity-100"}
+      className={`${scrollY === 0 ? 'before:opacity-0' : ''}
+      ${scrollEnd ? 'after:opacity-0' : 'after:opacity-100'}
     overlay relative w-full h-full flex items-center justify-between overflow-hidden lg:flex-col lg:justify-center lg:gap-10 `}
     >
       <div className="w-1/2 lg:w-full">
@@ -59,7 +59,7 @@ const Work = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work

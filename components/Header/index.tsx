@@ -1,15 +1,13 @@
-import { useState } from "react";
-import Logo from "../Logo";
-import Navbar from "@/components/Navbar";
-import MobileNavbarMenu from "@/components/Navbar/MobileNavbarMenu";
+import { useState } from 'react'
+import Logo from '../Logo'
+import Navbar from '@/components/Navbar'
+import MobileNavbarMenu from '@/components/Navbar/MobileNavbarMenu'
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
-  const openProps = { open, setOpen };
+  const [open, setOpen] = useState(false)
+  const openProps = { open, setOpen }
 
-  const handleClick = () => {
-    return open ? setOpen(false) : setOpen(true);
-  };
+  const handleClick = () => open ? setOpen(false) : setOpen(true)
 
   return (
     <header className="fixed top-0 w-full h-20 flex items-center justify-between border-b-[1px] border-secondary-bg-color-light z-50 sm:h-16 sm:px-4">
@@ -52,7 +50,7 @@ const Header = () => {
         </button>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

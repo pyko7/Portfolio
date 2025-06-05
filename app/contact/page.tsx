@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 const Contact = () => {
-  const [icon, setIcon] = useState(false);
+  const [icon, setIcon] = useState(false)
   return (
     <div className="w-full h-full flex items-center justify-between overflow-hidden lg:flex-col lg:justify-center lg:gap-10">
       <div className="w-1/2 lg:w-full">
@@ -53,7 +53,7 @@ const Contact = () => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

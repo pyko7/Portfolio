@@ -1,7 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-const Informations = () => {
-  return (
+const Informations = () => (
     <div className="w-full flex flex-col items-center justify-center gap-6 uppercase overflow-hidden">
       <div className="w-full flex justify-center gap-4">
         <h2 className="text-6xl animate-translateToRight sm:text-4xl">
@@ -29,7 +28,6 @@ const Informations = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
 
-export default Informations;
+export default Informations
