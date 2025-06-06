@@ -1,7 +1,8 @@
 'use client'
-import { grouposocial, lflPickem, moviz, shopIt } from '@/utils/builtProject'
+import { projects } from '@/utils/builtProject'
 import Work from '@/components/work/Work'
 import { FC, useCallback, useEffect, useRef, useState } from 'react'
+import { generateRandomGuid } from '@/utils/_utils'
 
 const WorkPage: FC = () => {
   const [scrollY, setScrollY] = useState(0)
@@ -44,44 +45,19 @@ const WorkPage: FC = () => {
         className="w-full h-full flex justify-center overflow-y-auto lg:w-1/2"
         onScroll={handleScroll}
       >
-        {/* TODO: MAP */}
-        <ul className="project_animation w-full h-full px-4 flex flex-col gap-10 lg:pr-[21%]">
-          <li>
-            <Work
-              title={lflPickem.title}
-              image={lflPickem.image}
-              url={lflPickem.url}
-              description={lflPickem.description}
-              techno={lflPickem.techno}
-            />
-          </li>
-          <li>
-            <Work
-              title={moviz.title}
-              image={moviz.image}
-              url={moviz.url}
-              description={moviz.description}
-              techno={moviz.techno}
-            />
-          </li>
-          <li>
-            <Work
-              title={shopIt.title}
-              image={shopIt.image}
-              url={shopIt.url}
-              description={shopIt.description}
-              techno={shopIt.techno}
-            />
-          </li>
-          <li>
-            <Work
-              title={grouposocial.title}
-              image={grouposocial.image}
-              url={grouposocial.url}
-              description={grouposocial.description}
-              techno={grouposocial.techno}
-            />
-          </li>
+        <ul className="project_animation w-full h-full px-4 flex flex-col gap-10 lg:justify-center lg:pr-[21%]">
+          {projects.map((project) => (
+            <li key={generateRandomGuid()} className="w-full">
+              <Work
+                title={project.title}
+                url={project.url}
+                description={project.description}
+                techno={project.techno}
+                date={project.date}
+                archived={project.archived}
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

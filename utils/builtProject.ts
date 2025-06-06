@@ -1,17 +1,27 @@
-export const lflPickem = {
+import { Project } from './_props'
+
+const lflPickem: Project = {
   title: 'LFL Pickem',
-  image: '/assets/images/projects/lfl_pickem.webp',
   description:
-    'LFL Pickem is website where you can predict the winner of every games on each days of LFL, the french league of League of Legends. Sign up and play with us !',
+    'Predict the winner of every games on each days of LFL, the french league of League of Legends.',
   techno: [''],
   url: 'https://github.com/pyko7/LFL-Pickem',
+  date: '2023',
+  archived: true,
 }
 
-export const shopIt = {
+const moviz: Project = {
+  title: 'Moviz',
+  description: 'Movie index.',
+  techno: ['NextJS', 'TailwindCSS', 'The Movie Database API', 'Vercel'],
+  url: 'https://moviz.vercel.app/',
+  date: '2023',
+}
+
+const shopIt: Project = {
   title: 'Shop-it!',
-  image: '/assets/images/projects/shop-it.webp',
   description:
-    'Shop-it is a fake e-commerce website where you can find all sorts of products.',
+    'Fake e-commerce website where you can find all sorts of products.',
   techno: [
     'NextJS',
     'MUI',
@@ -22,21 +32,8 @@ export const shopIt = {
     'Vercel',
   ],
   url: 'https://shop-it-now.vercel.app/',
-}
-export const moviz = {
-  title: 'Moviz',
-  image: '/assets/images/projects/moviz.webp',
-  description:
-    'Moviz is a movie index. On Moviz you can find your next movie. The most popular or by genre, the choice is yours.',
-  techno: ['NextJS', 'TailwindCSS', 'The Movie Database API', 'Vercel'],
-  url: 'https://moviz.vercel.app/',
+  date: '2022',
+  archived: true,
 }
 
-export const grouposocial = {
-  title: 'Grouposocial',
-  image: '/assets/images/projects/grouposocial.webp',
-  description:
-    'Grouposocial is a social network built for a fictional company. Users can post their thoughts and interact with each other.',
-  techno: ['React', 'SASS', 'NodeJS', 'ExpressJS', 'MySQL', 'Prisma'],
-  url: 'https://github.com/pyko7/Groupomania',
-}
+export const projects = [moviz, lflPickem, shopIt]

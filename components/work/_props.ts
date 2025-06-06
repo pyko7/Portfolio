@@ -1,7 +1,3 @@
-export type WorkProps = {
-  title: string
-  image: string
-  description: string
-  techno: string[]
-  url: string
-}
+import { Project } from '@/utils/_props'
+
+export type WorkProps = Project

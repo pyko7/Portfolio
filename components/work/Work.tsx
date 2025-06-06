@@ -1,23 +1,28 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import Image from 'next/image'
 import { FC } from 'react'
 import { WorkProps } from './_props'
 
-const Work: FC<WorkProps> = ({ title, image, description, techno, url }) => (
-  <div className={'w-full flex justify-end md:justify-center'}>
-    <a
-      href={url}
-      target="_blank"
-      className="relative w-full aspect-video overflow-hidden md:max-w-[680px] lg:w-[520px]"
-    >
-      <Image
-        fill
-        src={image}
-        alt={`${title} project`}
-        quality={100}
-        className="hover:scale-110 duration-700 hover:brightness-105"
-      />
-    </a>
+const Work: FC<WorkProps> = ({
+  title,
+  description,
+  techno,
+  url,
+  date,
+  archived = false,
+}) => (
+  <div className="w-full flex flex-col gap-2 md:max-w-xl">
+    <div className="w-full flex items-center gap-1 justify-end text-secondary-bg-color-light text-end font-semibold">
+      <a href={url} target="_blank">
+        <h3>{title}</h3>
+      </a>
+      <span className="text-xs">{archived ? '(archived)' : ''}</span>
+      <span>/</span>
+      <span>{date}</span>
+    </div>
+
+    <div className="flex flex-col gap-1 text-sm">
+      <p>{description}</p>
+      <span className="text-secondary-bg-color">{techno.join(' / ')}</span>
+    </div>
   </div>
 )
 
