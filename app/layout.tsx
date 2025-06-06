@@ -6,14 +6,20 @@ import HeaderWrapper from '@/components/header/HeaderWrapper'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'Julien Henry',
+  title: 'Julien Henry – Fullstack Developer',
   description:
     'Julien Henry, experienced French full-stack developer based in France, showcasing a portfolio of modern web applications, creative solutions, and technical expertise.',
   openGraph: {
-    title: 'Julien Henry',
+    title: 'Julien Henry – Fullstack Developer',
     description:
       'Julien Henry, experienced French full-stack developer based in France, showcasing a portfolio of modern web applications, creative solutions, and technical expertise.',
+    url: 'https://julienhenry.fr/',
+    type: 'website',
   },
+  alternates: {
+    canonical: 'https://julienhenry.fr/',
+  },
+  robots: 'index, follow',
 }
 
 const syne = Syne({
@@ -29,7 +35,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => (
       <div className="relative w-full h-screen bg-main-bg-color text-main-font-color">
         <HeaderWrapper />
         <main className="w-full h-full flex items-center justify-center py-20">
-          <section className="w-full h-full py-10 sm:w-[70%] lg:4/5">
+          <section className="w-full h-full py-10 sm:w-[70%]">
             {children}
           </section>
         </main>

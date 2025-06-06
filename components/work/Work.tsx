@@ -12,7 +12,7 @@ const Work: FC<WorkProps> = ({
   <div className="w-full flex flex-col gap-2 md:max-w-xl">
     <div className="w-full flex items-center gap-1 justify-end text-secondary-bg-color-light text-end font-semibold">
       <a href={url} target="_blank">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
       </a>
       <span className="text-xs">{archived ? '(archived)' : ''}</span>
       <span>/</span>
