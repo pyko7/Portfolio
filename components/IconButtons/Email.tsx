@@ -7,7 +7,7 @@ const EmailButton = () => (
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8"
+      className="w-6 h-6 sm:w-7 sm:h-7 lg:w-6 lg:h-6"
     >
       <path
         strokeLinecap="round"

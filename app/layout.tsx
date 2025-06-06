@@ -1,7 +1,6 @@
 import { Syne } from 'next/font/google'
 import { FC, PropsWithChildren } from 'react'
 import type { Metadata } from 'next'
-import Icons from '@/components/icons/Icons'
 import Footer from '@/components/footer/Footer'
 import HeaderWrapper from '@/components/header/HeaderWrapper'
 import '@/styles/globals.css'
@@ -29,9 +28,6 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => (
     >
       <div className="relative w-full h-screen bg-main-bg-color text-main-font-color">
         <HeaderWrapper />
-        <div className="hidden absolute top-[70%] left-[15%] -ml-3 lg:-ml-[15px] md:flex z-[51] lg:left-[10%]">
-          <Icons />
-        </div>
         <main className="w-full h-full flex items-center justify-center py-20">
           <section className="w-full h-full py-10 sm:w-[70%] lg:4/5">
             {children}

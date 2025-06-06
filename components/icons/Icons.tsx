@@ -10,7 +10,7 @@ const Icons = () => {
     <LinkedInButton key={generateRandomGuid()} />,
   ]
   return (
-    <ul className="w-fit py-5 flex gap-6 bg-main-bg-color md:flex-col md:gap-8 lg:gap-10">
+    <ul className="w-fit py-5 flex gap-6 bg-main-bg-color">
       {icons.map((icon) => (
         <li key={icon.key}>{icon}</li>
       ))}

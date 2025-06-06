@@ -9,8 +9,8 @@ import { useMobileNavbarContext } from '../mobileNavbarMenu/MobileNavbarContext'
 const Header: FC = () => {
   const { handleClick } = useMobileNavbarContext()
   return (
-    <header className="fixed h-16 px-4 top-0 w-full flex items-center justify-between border-b-[1px] border-secondary-bg-color-light z-50 sm:px-0">
-      <div className="w-1/2 p-0 h-full flex items-center z-10 lg:w-[10%] sm:w-[15%] sm:justify-center">
+    <header className="fixed h-16 px-4 top-0 w-full flex items-center justify-between border-b-[1px] border-secondary-bg-color-light z-50 xl:h-20 py-4">
+      <div className="w-1/2 p-0 h-full flex items-center z-10 sm:w-[15%] sm:justify-center md:justify-start lg:w-[10%] lg:px-4">
         <Logo />
       </div>
 
