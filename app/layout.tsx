@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import Footer from '@/components/footer/Footer'
 import HeaderWrapper from '@/components/header/HeaderWrapper'
 import '@/styles/globals.css'
+
 export const metadata: Metadata = {
   title: 'Julien Henry – Fullstack Developer',
   description:

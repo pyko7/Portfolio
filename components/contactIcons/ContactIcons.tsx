@@ -1,7 +1,7 @@
 'use client'
 import { FC, useState } from 'react'
-import LetterIcon from '../icons/LetterIcon'
-import SendIcon from '../icons/SendIcon'
+import LetterIcon from '@/components/icons/LetterIcon'
+import SendIcon from '@/components/icons/SendIcon'
 
 const ContactIcons: FC = () => {
   const [hovered, setHovered] = useState(false)

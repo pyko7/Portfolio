@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Icons from '../icons/Icons'
+import Icons from '@/components/icons/Icons'
 
 const Footer: FC = () => (
   <footer className="fixed bottom-0 w-full h-16 px-4 flex items-center justify-between border-t-[1px] border-secondary-bg-color-light z-40 sm:h-20 sm:px-0">

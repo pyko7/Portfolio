@@ -1,5 +1,5 @@
-import MobileNavbarContextProvider from '../mobileNavbarMenu/MobileNavbarContext'
-import Header from './Header'
+import MobileNavbarContextProvider from '@/components/mobileNavbarMenu/MobileNavbarContext'
+import Header from '@/components/header/Header'
 
 const HeaderWrapper = () => (
   <MobileNavbarContextProvider>

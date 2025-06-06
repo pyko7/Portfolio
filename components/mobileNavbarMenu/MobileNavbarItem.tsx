@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { useMobileNavbarContext } from './MobileNavbarContext'
-import { MobileNavbarItemProps } from './_props'
+import { useMobileNavbarContext } from '@/components/mobileNavbarMenu/MobileNavbarContext'
+import { MobileNavbarItemProps } from '@/components/mobileNavbarMenu/_props'
 
 const MobileNavbarItem: FC<MobileNavbarItemProps> = ({ pathname }) => {
   const { handleClick } = useMobileNavbarContext()

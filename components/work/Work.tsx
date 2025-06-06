@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { WorkProps } from './_props'
+import { WorkProps } from '@/components/work/_props'
 
 const Work: FC<WorkProps> = ({
   title,

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { NavbarItemProps } from './_props'
+import { NavbarItemProps } from '@/components/navbar/_props'
 
 const NavbarItem: FC<NavbarItemProps> = ({ pathname }) => (
   <li

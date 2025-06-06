@@ -1,4 +1,4 @@
-import { MobileNavbarContextProps } from './_props'
+import { MobileNavbarContextProps } from '@/components/mobileNavbarMenu/_props'
 
 export const contextDefaultValues: MobileNavbarContextProps = {
   open: false,

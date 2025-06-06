@@ -1,5 +1,5 @@
 import { PATHNAMES } from '@/utils/_utils'
-import NavbarItem from './NavbarItem'
+import NavbarItem from '@/components/navbar/NavbarItem'
 import { FC } from 'react'
 
 const Navbar: FC = () => (

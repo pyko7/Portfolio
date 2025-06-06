@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import Icons from '../icons/Icons'
-import MobileNavbarItem from './MobileNavbarItem'
+import Icons from '@/components/icons/Icons'
+import MobileNavbarItem from '@/components/mobileNavbarMenu/MobileNavbarItem'
 import { PATHNAMES } from '@/utils/_utils'
 
 const MobileNavbar: FC = () => (

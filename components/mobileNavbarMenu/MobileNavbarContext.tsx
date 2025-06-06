@@ -6,8 +6,8 @@ import {
   useContext,
   useState,
 } from 'react'
-import { contextDefaultValues } from './_utils'
-import { MobileNavbarContextProps } from './_props'
+import { contextDefaultValues } from '@/components/mobileNavbarMenu/_utils'
+import { MobileNavbarContextProps } from '@/components/mobileNavbarMenu/_props'
 
 const MobileNavbarContext =
   createContext<MobileNavbarContextProps>(contextDefaultValues)

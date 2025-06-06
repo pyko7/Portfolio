@@ -1,7 +1,7 @@
 import { Transition } from '@headlessui/react'
-import CloseButton from '../IconButtons/Close'
-import MobileNavbar from './MobileNavbar'
-import { useMobileNavbarContext } from './MobileNavbarContext'
+import CloseButton from '@/components/IconButtons/Close'
+import MobileNavbar from '@/components/mobileNavbarMenu/MobileNavbar'
+import { useMobileNavbarContext } from '@/components/mobileNavbarMenu/MobileNavbarContext'
 
 const MobileNavbarMenu = () => {
   const { open, handleClick } = useMobileNavbarContext()

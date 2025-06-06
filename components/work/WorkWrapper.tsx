@@ -1,6 +1,6 @@
 'use client'
 import { FC, useCallback, useEffect, useRef, useState } from 'react'
-import WorkList from './WorkList'
+import WorkList from '@/components/work/WorkList'
 
 const WorkWrapper: FC = () => {
   const [scrollY, setScrollY] = useState(0)

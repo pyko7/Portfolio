@@ -1,9 +1,10 @@
+import { FC } from 'react'
 import { generateRandomGuid } from '@/utils/_utils'
-import EmailButton from '../IconButtons/Email'
-import GithubButton from '../IconButtons/Github'
-import LinkedInButton from '../IconButtons/LinkedIn'
+import EmailButton from '@/components/IconButtons/Email'
+import GithubButton from '@/components/IconButtons/Github'
+import LinkedInButton from '@/components/IconButtons/LinkedIn'
 
-const Icons = () => {
+const Icons: FC = () => {
   const icons = [
     <EmailButton key={generateRandomGuid()} />,
     <GithubButton key={generateRandomGuid()} />,

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import AboutLink from './AboutLink'
+import AboutLink from '@/components/about/AboutLink'
 
 const About: FC = () => (
   <div

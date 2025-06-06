@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { AboutLinkProps } from './_props'
+import { AboutLinkProps } from '@/components/about/_props'
 
 const AboutLink: FC<AboutLinkProps> = ({ url, label }) => (
   <Link
