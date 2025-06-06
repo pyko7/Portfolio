@@ -7,7 +7,7 @@ const Home: FC = () => (
       <About />
     </div>
     <div className="w-full flex justify-center opacity-0 animate-slowFadeIn lg:w-1/2">
-      <p className="text-base sm:text-2xl">
+      <p className="text-base sm:text-2xl lg:text-xl xl:text-2xl">
         Build accessible content for everyone.
       </p>
     </div>
