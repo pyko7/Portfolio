@@ -1,7 +1,8 @@
 import { PATHNAMES } from '@/utils/_utils'
 import NavbarItem from './NavbarItem'
+import { FC } from 'react'
 
-const Navbar = () => (
+const Navbar: FC = () => (
   <nav
     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center"
     aria-label="Main navigation"

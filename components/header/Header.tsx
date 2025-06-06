@@ -1,10 +1,10 @@
 'use client'
 import { FC } from 'react'
 import Logo from '../Logo'
+import Navbar from '@/components/navbar/Navbar'
 import MobileNavbarMenu from '@/components/mobileNavbarMenu/MobileNavbarMenu'
 import MenuIcon from '../icons/MenuIcon'
 import { useMobileNavbarContext } from '../mobileNavbarMenu/MobileNavbarContext'
-import Navbar from '../navbar/Navbar'
 
 const Header: FC = () => {
   const { handleClick } = useMobileNavbarContext()
