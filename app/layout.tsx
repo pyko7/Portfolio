@@ -1,10 +1,10 @@
 import { Syne } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import { FC, PropsWithChildren } from 'react'
 import type { Metadata } from 'next'
 import Footer from '@/components/footer/Footer'
 import HeaderWrapper from '@/components/header/HeaderWrapper'
 import '@/styles/globals.css'
-
 export const metadata: Metadata = {
   title: 'Julien Henry – Fullstack Developer',
   description:
@@ -37,6 +37,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => (
         <main className="w-full h-full flex items-center justify-center py-20">
           <section className="w-full h-full py-10 sm:w-[70%]">
             {children}
+            <Analytics />
           </section>
         </main>
         <Footer />
