@@ -1,12 +1,7 @@
-const Logo = () => {
-  return (
-    <a
-      className="w-14 h-14 pl-[3px] pb-[2px] flex justify-center items-center text-4xl text-main-font-color border-2 border-main-font-color rounded-[50%] no-underline sm:w-11 sm:h-11 sm:text-3xl sm:pl-[1px]"
-      href="#home"
-    >
-      J
-    </a>
-  );
-};
+const Logo = () => (
+  <h1 className="w-11 h-11 flex justify-center items-center text-3xl text-main-font-color border-2 border-main-font-color rounded-[50%] no-underline sm:w-14 sm:h-14 sm:text-4xl">
+    J
+  </h1>
+)
 
-export default Logo;
+export default Logo
