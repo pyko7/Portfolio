@@ -1,5 +1,5 @@
 const EmailButton = () => (
-  <a aria-label="send me an email" href="mailto:julienprohenry@gmail.com">
+  <a aria-label="send me an email" href="mailto:julienhenry.pro@etik.com">
     <svg
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"

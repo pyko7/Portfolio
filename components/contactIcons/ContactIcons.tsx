@@ -10,7 +10,7 @@ const ContactIcons: FC = () => {
     <div className="w-full h-full flex items-center justify-center animate-fastFadeIn opacity-0 lg:w-1/2">
       <a
         aria-label="send me an email"
-        href="mailto:julienprohenry@gmail.com"
+        href="mailto:julienhenry.pro@etik.com"
         onMouseOver={() => setHovered(true)}
         onMouseOut={() => setHovered(false)}
       >
