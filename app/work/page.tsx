@@ -1,6 +1,7 @@
 import WorkWrapper from '@/components/work/WorkWrapper'
 import { Metadata } from 'next'
 import { FC } from 'react'
+import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'Work | Julien Henry – Fullstack Developer',
@@ -19,6 +20,6 @@ export const metadata: Metadata = {
   robots: 'index, follow',
 }
 
-const WorkPage: FC = () => <WorkWrapper />
+const WorkPage: FC = () => notFound()
 
 export default WorkPage
