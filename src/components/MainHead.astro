@@ -1,0 +1,33 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  url?: string;
+  type?: string;
+}
+
+const {
+  title = "Julien Henry – Fullstack Developer",
+  description = "Julien Henry, experienced French full-stack developer based in France, showcasing a portfolio of modern web applications, creative solutions, and technical expertise.",
+  url = "https://julienhenry.fr",
+  type = "website",
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<meta property="og:title" content={title} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={url} />
+<title>{title}</title>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+  rel="stylesheet"
+/>
