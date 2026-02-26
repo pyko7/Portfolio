@@ -1,0 +1,91 @@
+---
+import IconButton from "./IconButton.astro";
+import Email from "../icons/email.svg";
+import Github from "../icons/github.svg";
+import LinkedIn from "../icons/linkedin.svg";
+---
+
+<footer class="fixed-item">
+  <div class="footer-inner-container">
+    <div class="footer-icon-container">
+      <IconButton
+        ariaLabel="send me an email"
+        href="mailto:julienhenry.pro@etik.com"
+      >
+        <Email class="footer-svg" />
+      </IconButton>
+      <IconButton ariaLabel="github" href="https://github.com/pyko7">
+        <Github class="footer-svg" />
+      </IconButton>
+      <IconButton
+        ariaLabel="linkedin"
+        href="https://www.linkedin.com/in/julienhenry9671"
+      >
+        <LinkedIn class="footer-svg" />
+      </IconButton>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    bottom: 0;
+    border-top: 1px solid var(--neutral-light);
+  }
+
+  footer::before,
+  footer::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 85px;
+    height: 2px;
+    background-image: linear-gradient(var(--neutral-gradient));
+    filter: blur(1px);
+    animation: lightningBorderToLeft 8s linear infinite;
+    transform: rotate(180deg);
+  }
+
+  .footer-inner-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-icon-container {
+    width: fit-content;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media (width >= 40rem) {
+    footer {
+      height: 5rem;
+      padding-inline: 0;
+    }
+    .footer-svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+
+  @keyframes lightningBorderToLeft {
+    0% {
+      right: -150px;
+    }
+    50% {
+      right: 50%;
+    }
+    100% {
+      right: 110%;
+    }
+  }
+</style>

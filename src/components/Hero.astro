@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  tagline?: string;
+}
+
+const { tagline, title } = Astro.props;
+---
+
+<div class="w-full flex justify-center">
+  <div class="flex flex-col align-center gap-2">
+    <h1 class="text-4xl">{title}</h1>
+    {tagline && <p class="text-3xl">{tagline}</p>}
+  </div>
+  <slot />
+</div>
